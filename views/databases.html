@@ -1,0 +1,57 @@
+<update-title title="{{'databases_meta_title' | translate}}"></update-title>
+<update-meta name="description" content="{{'databases_meta_description' | translate}}"></update-meta>
+<div id="databases_page">
+    <!-- Banner Section -->
+    <div class="database_banner">
+        <img ng-src="images/services/technologies/database/{{'Databases_bannerimage' | translate}}.jpg" class="img-responsive" alt="{{'Database_imagetext' | translate}}">
+        <h1 class="db_banner_text">{{'Databases_heading1' | translate}}<br /><br />{{'Databases_heading2' | translate}}</h1>
+    </div>
+    <!--End of Banner Section -->
+    <section id="databases">
+        <!-- Title And Sub-Title Sction -->
+        <div layout-align="center center" layout="column" class="db_title_section">
+            <div class="scroll_down" layout-align="center" layout="row">
+                <md-icon md-svg-icon="images/icons/ic_keyboard_arrow_down_black_48px.svg" id="down" du-smooth-scroll="down" offset="30" duration="800"></md-icon>
+            </div>
+            <h1 layout-align="center" layout="row">{{'Databases_title' | translate}}</h1>
+            <p>{{'Databases_description' | translate}}</p>
+        </div>
+        <!-- End of Title And Sub-Title Sction -->
+        <!-- Technologies icon horizontal men-->
+        <div class="databases_tab" ng-init="service_items=[0,1,2]">
+          <md-content>
+              <md-tabs  md-dynamic-height="" md-border-bottom="" md-no-pagination>
+                  <md-tab   ng-repeat="service in service_items"  ng-click="scrollTo('item-'+service)">
+                      <md-tab-label layout="row">
+                          <div >
+                              <a href="#{{'item-'+service}}" du-smooth-scroll><img  ng-src="images/services/technologies/database/{{ 'databases.'+ service +'.icon_img' | translate }}.png" class="img-responsive services_icon" alt="{{ 'databases.'+ service +'.desc' | translate }}"></a>
+                          </div>
+                          <span class="db_icon_text">{{ 'databases.'+ service +'.desc' | translate }}</span>
+                      </md-tab-label>
+                  </md-tab>
+              </md-tabs>
+          </md-content>
+<!--List of programming languages-->
+<div  id="databases_box" layout="column"  ng-repeat="list_item in service_items" >
+  <div id="databases_container">
+    <div layout="row"  id="{{'item-'+list_item}}">
+      <h2 flex  >{{'databases.'+list_item+'.heading' | translate}}</h2>
+    </div>
+    <div -webkit-layout="row" layout-gt-md="row" layout-md="row" -webkit-layout-sm="column" -webkit-layout-xs="column" id="{{'item-'+list_item}}" class="databases_item">
+      <div flex="15" flex-sm="100" flex-xs="100" id="image"><img ng-src="images/services/technologies/database/{{'databases.'+ list_item +'.img' | translate}}.png"  alt="{{'databases.'+ list_item+'.heading' | translate}}"></div>
+      <P  flex="85" flex-sm="100" flex-xs="100">
+      {{'databases.'+ list_item +'.description' | translate}}
+      </p>
+    </div>
+  </div>
+</div>
+<!--Link to customer's project page-->
+<div layout="row" id="aboutProject_databases">
+  <div flex>
+    <a ui-sref="{{'about_project_url' | translate}}({lancode:language})" target="_blank"><h2>{{'about_project' | translate}}<img ng-src="images/services/technologies/{{'technologies_arrow' | translate}}.png"  alt="{{'technologies_arrow_alt' | translate}}"> </h2></a>
+  </div>
+</div>
+</div>
+<!-- End of md-tab -->
+</section>
+</div>

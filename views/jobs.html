@@ -1,0 +1,95 @@
+<update-title title="{{text.jobs_meta_title}}"></update-title>
+<update-meta name="description" content="{{text.jobs_meta_description}}"></update-meta>
+
+<md-content id="job_page" class="jobs_page" flex>
+  <!-- working at wiredelta banner starts here -->
+  <div layout="row" layout-align="center center">
+    <div layout="column">
+      <p class="work_at_wd">{{text.working_at_wd_banner}}</p>
+      <md-divider class="banner_hr"></md-divider>
+      <div layout="row" layout-align="center center" ng-click="playVideo();">
+        <img class="play_video" src="../images/jobs/play.png" alt="working at WD" />
+      </div>
+    </div>
+  </div>
+  <!-- working at wiredelta banner ends here -->
+  <!-- working at wiredelta text starts here -->
+  <div layout="column" flex="100">
+    <h1 class="job_headers">{{text.working_at_wd_text}}</h1>
+    <p class="with_us_desc" ng-bind-html=text.text></p>
+  </div>
+  <!-- working at wiredelta text ends here -->
+
+  <!--Urgent openings starts-->
+  <div class="job_container" layout="column" id="urgent_jobs">
+    <!-- sticky header starts -->
+    <div class="sticky_header" layout="column">
+      <h1 class="job_headers" id="urgent_job_header" layout="row" layout-align="center center">URGENT OPENINGS </h1>
+    </div>
+    <!-- sticky header ends -->
+
+    <!-- ng repeat for the jobs starts here -->
+    <div id="{{job.section_name}}" id="urgent_jobs" class="job_body jobs_mainpage" ng-repeat="job in jobsObj | limitTo: 1" ng-if="job.isVisible==true">
+      <div layout="row" layout-wrap layout-align="space-between start">
+        <!-- ng-repeat all the Jobs for current section -->
+        <div class="jobs-section" id="jobs_section" ng-repeat="item in job.data" ng-if="item.isVisible==true">
+          <div class="job_posts" layout="column" layout-sm="column">
+            <div class="job_name" layout="row" layout-align="space-between center">
+              <span>{{item.name}}</span>
+              <div ng-click="linkTo(item.jsonfile,{langcode:language})" id="readmore">Read More</div>
+            </div>
+            <div class="job_desc">{{item.description}}</div>
+          </div>
+        </div>
+        <!-- ng-repeat all the Jobs for current section ends -->
+      </div>
+    </div>
+    <!-- ng repeat for the jobs ends here -->
+  </div>
+  <!-- urgent openings ends-->
+
+
+
+
+
+  <!-- Job Openings starts here -->
+  <div class="job_container" layout="column">
+    <!-- sticky header starts -->
+    <div class="sticky_header" layout="column">
+      <h1 class="job_headers" layout="row" layout-align="center center">{{text.job_openings_header}}</h1>
+      <div sticky offset="60" layout="column">
+        <div layout="row" class="sticky_bar" layout-lign="space-around center" layout-wrap>
+          <a ng-mouseenter="hover = true" ng-mouseleave="hover = false" class="job_openings" layout="column" layout-align="center center" ng-repeat="opening in jobsObj" ng-if="opening.isVisible==true" scroll-on-click href="#{{opening.id_to_scroll_to}}" du-smooth-scroll
+              du-scrollspy>
+            <img class="job_opening_img" ng-class="{resize: hover}" ng-src="http://wd-agency.com:5062/img/jobPages/{{opening.img}}" />
+            <span class="img_name" ng-class="{hiden: hover}">{{opening.section_name}}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- sticky header ends -->
+
+
+
+
+    <!-- ng repeat for the jobs starts here -->
+    <div id="{{job.section_id}}" class="job_body jobs_mainpage" ng-repeat="job in jobsObj" ng-if="job.isVisible==true">
+      <h1>{{job.section_name}}</h1>
+      <md-divider></md-divider>
+      <div layout="row" layout-wrap layout-align="space-between start">
+        <!-- ng-repeat all the Jobs for current section -->
+        <div class="jobs-section" ng-repeat="item in job.data" ng-if="item.isVisible==true">
+          <div class="job_posts" layout="column" layout-sm="column">
+            <div class="job_name" layout="row" layout-align="space-between center">
+              <span>{{item.name}}</span>
+              <div ng-click="linkTo(item.jsonfile,{langcode:language})">Read More</div>
+            </div>
+            <div class="job_desc">{{item.description}}</div>
+          </div>
+        </div>
+        <!-- ng-repeat all the Jobs for current section ends -->
+      </div>
+    </div>
+    <!-- ng repeat for the jobs ends here -->
+  </div>
+</md-content>

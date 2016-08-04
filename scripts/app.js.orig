@@ -1,0 +1,204 @@
+'use strict';
+
+/**
+ * @ngdoc overview
+ * @name wdcApp
+ * @description
+ * # wdcApp
+ *
+ * Main module of the application.
+ */
+angular
+    .module('wdcApp', [
+        'ngAnimate',
+        'ngAria',
+        'ngCookies',
+        'ngMessages',
+        'ngResource',
+        'ngRoute',
+        'ngSanitize',
+        'ngTouch',
+        'ngMaterial',
+        'angular-click-outside',
+        'ui.router',
+        'duScroll',
+        'duParallax',
+        'ui.bootstrap',
+        'ngDragDrop',
+        'sticky',
+        'angular-svg-round-progress',
+        'slickCarousel',
+        'sticky',
+        'angular-svg-round-progress',
+        'slickCarousel',
+        'pascalprecht.translate',
+        'updateMeta'
+    ])
+
+.config(function($urlRouterProvider, $stateProvider, $translateProvider) {
+
+    //-------------STATES Starts here --------------------///
+    //default state
+    $urlRouterProvider.otherwise('en');
+    //setting up states
+    $stateProvider
+    //Home Page State
+        .state('main', {
+            url: '/:langcode',
+            templateUrl: 'views/main.html',
+            controller: 'MainCtrl',
+            activetab: 'home'
+        })
+        //About Page State
+        .state('about', {
+            url: '/about/:langcode',
+            templateUrl: 'views/about.html',
+            controller: 'AboutCtrl',
+            activetab: 'about'
+        })
+        //Process Page State
+        .state('process', {
+            url: '/process/:langcode',
+            templateUrl: 'views/process.html',
+            controller: 'ProcessCtrl'
+        })
+        //Services Page State
+        .state('services', {
+            url: '/services/:langcode',
+            templateUrl: 'views/services.html',
+            controller: 'ServicesCtrl'
+        })
+        //promotional Page State
+        .state('promotional', {
+            url: '/promotional/:langcode',
+            templateUrl: 'views/promotional.html',
+            controller: 'PromotionalCtrl'
+        })
+
+        //E-commerce Page State
+        .state('e_commerce', {
+            url: '/e_commerce/:langcode',
+            templateUrl: 'views/e_commerce.html',
+            controller: 'ecommerceCtrl'
+        })
+
+        //Landing Page State
+        .state('landingpage', {
+            url: '/landingpage/:langcode',
+            templateUrl: 'views/landingpage.html',
+            controller: 'landingpageCtrl'
+        })
+
+
+        //Technologies Page State
+        .state('technologies', {
+            url: '/technologies/:langcode',
+            templateUrl: 'views/technologies.html',
+            controller: 'TechnologiesCtrl'
+        })
+
+        //Programming languages Page State
+        .state('programminglanguages', {
+            url: '/programminglanguages/:langcode',
+            templateUrl: 'views/programmingLanguages.html',
+            controller: 'programmingLanguagesCtrl'
+        })
+<<<<<<< HEAD
+        //service -> design page
+        .state('design', {
+            url: '/design/:langcode',
+            templateUrl: 'views/design.html',
+            controller: 'DesignCtrl'
+        })
+        //service -> hosting page
+        .state('hosting', {
+            url: '/hosting/:langcode',
+            templateUrl: 'views/hosting.html',
+            controller: 'HostingCtrl'
+        })
+        //service -> hosting page
+        .state('marketing', {
+            url: '/marketing/:langcode',
+            templateUrl: 'views/marketing.html',
+            controller: 'MarketingCtrl'
+        })
+        //Service -> android page state
+        .state('android', {
+            url: '/android/:langcode',
+            templateUrl: 'views/android.html',
+            controller: 'AndroidCtrl'
+=======
+
+        //Frameworks Page State
+        .state('frameworks', {
+            url: '/frameworks/:langcode',
+            templateUrl: 'views/frameworks.html',
+            controller: 'frameworksCtrl'
+>>>>>>> b710d1f2a753286a61b1e22eb5cfe0569515764d
+        })
+
+        //Database Page State
+        .state('databases', {
+            url: '/databases/:langcode',
+            templateUrl: 'views/databases.html',
+            controller: 'databaseCtrl'
+        })
+        // References Page State
+        .state('references', {
+            url: '/references/:langcode',
+            templateUrl: 'views/references.html',
+            controller: 'ReferencesCtrl'
+        })
+        // Contact Page State
+        .state('contact', {
+            url: '/contact/:langcode',
+            templateUrl: 'views/contact.html',
+            controller: 'ContactCtrl'
+        })
+        // Pricing Page State
+        .state('pricing', {
+            url: '/pricing/:langcode',
+            templateUrl: 'views/pricing.html',
+            controller: 'PricingCtrl'
+        })
+        // Jobs Page State
+        .state('jobs', {
+            url: '/jobs/:langcode',
+            templateUrl: 'views/jobs.html',
+            controller: 'JobsCtrl',
+            params: {
+                'scrollTo': ''
+            }
+        })
+        //Individual Job Pages State
+        .state('job', {
+            url: '/jobs/:id/:langcode',
+            templateUrl: 'views/job.html',
+            controller: 'JobCtrl'
+        })
+        // Facewall Page State
+        .state('facewall', {
+            url: '/facewall/:langcode',
+            templateUrl: 'views/facewall.html',
+            controller: 'FacewallCtrl'
+        });
+    $translateProvider.useStaticFilesLoader({
+        prefix: 'assets/wordings/all/all_',
+        suffix: '.json'
+    });
+
+    // load 'en' table on startup
+    var url_lang = window.location.href.split("/").pop(-1);
+    if (url_lang == "en" || url_lang == "fr" || url_lang == "es") {
+        $translateProvider.preferredLanguage(url_lang);
+    } else {
+        $translateProvider.preferredLanguage('en');
+    }
+
+})
+
+.run(function($anchorScroll, $window, $rootScope, $stateParams) {
+    $rootScope.$on("$stateChangeSuccess", function(event, currentState, previousState) {
+        $window.scrollTo(0, 0);
+    });
+});

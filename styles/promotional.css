@@ -1,0 +1,470 @@
+
+/*-----programming language page styling starts---------*/
+/*Banner Section*/
+.promotional_banner { 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 350px;
+    margin-top: 60px;
+}
+
+.promotional_banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.promotional_banner .promotional_banner_text {
+    font-family: GeosansLight;
+    position: absolute;
+    top: 100px;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+/*Banner Section Ends*/
+
+/*Title And Sub-Title Sction*/
+#promotional_page section {
+    position: relative;
+    margin-top: 387px;
+    background-color: #fff;
+}
+
+ #promotional_page .promotional_tab{
+   text-align: center;
+ }
+
+.scroll_down {
+    width: 78px;
+    height: 78px;
+    margin-top: -40px;
+    border-radius: 100%;
+    background-color: #fff;
+}
+
+#promotional_page md-icon {
+    margin-top: 10px;
+    height: 36px;
+    width: 36px;
+}
+
+#promotional_page md-icon svg {
+    fill: #549db9;
+}
+
+.promotional_title_section h1 {
+    font-family: 'GeosansLight';
+    margin-top: 0;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.promotional_title_section p {
+    font-family: 'Open_sanslight';
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    color: #484743;
+    width: 75%;
+    margin-bottom: 20px;
+}
+/*Title And Sub-Title Sction Ends*/
+
+/*Customized md-tab*/
+.promotional_tab md-content {
+    height: 140px;
+    overflow: visible;
+}
+
+#promotional_page .promotional_tab md-content md-tabs md-tabs-canvas {
+    height: 80px;
+    margin-bottom: 25px;
+}
+
+#promotional_page md-pagination-wrapper {
+    position: relative;
+    width: 460px !important;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+#promotional_page .md-tab {
+    overflow: visible;
+    width: 50px;
+    height: 50px;
+    margin: 0 180px;
+    border-radius: 100%;
+    background-color: #549db9;
+}
+
+#promotional_page .md-tab:nth-child(1){ margin-left: 0px;}
+#promotional_page .md-tab:nth-child(2){ margin-right: 0px;}
+
+
+#promotional_page md-tabs[md-border-bottom] md-tabs-wrapper {
+    border-style: none;
+}
+
+#promotional_page md-ink-bar {
+    height: 0;
+}
+
+
+
+#promotional_page md-tabs .md-tab.md-active .services_icon,
+#promotional_page md-tabs .md-tab.md-focused .services_icon {
+    color: transparent !important;
+    border: 2px solid #fff;
+    border-radius: 100%;
+}
+
+#promotional_page [role='tabpanel'] {
+    -webkit-transition: none;
+    transition: none;
+}
+
+#promotional_page md-tabs .md-tab .md-ripple-container {
+    display: none;
+}
+
+#promotional_page md-tab-content.md-left:not(.md-active) * {
+    visibility:hidden;
+}
+
+#promotional_page md-tab-content.md-right:not(.md-active) * {
+    visibility: visible;
+}
+/*Customized md-tab Ends*/
+
+
+/*Customize icons*/
+.services_icon {
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 2px solid #549db9;
+    border-radius: 100%;
+    background-color: #549db9;
+}
+
+#promotional_page .md-tab:hover {
+    box-shadow: rgba(0,0,0,0.4) 0px 0px 10px;
+}
+
+
+.services_icon {
+  /*box-shadow: rgba(0,0,0,0.4) 0px 0px 10px;*/
+  cursor: pointer;
+
+}
+
+
+/* End of icon customization*/
+
+.promotional_icon_text {
+    font-family: 'Open_sanslight';
+    font-size: 14px;
+    color: #333333;
+    position: absolute;
+    width: 260%;
+    left: -80%;
+    margin-top: 40px;
+}
+
+#promotional_box{
+  margin-bottom: 40px;
+}
+#promotional_box #promotional_container {
+  margin-bottom: 40px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+
+#promotional_box:nth-child(2n+2){
+  background-color: #fafafa;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+#promotional_box:nth-child(2n+1) .promotional_item{
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+
+}
+
+
+
+/*language_box customization */
+#promotional_box h2{
+  color: #63BAA7;
+  font-family: 'GeosansLight';
+}
+
+#promotional_box p{
+  font-family: 'Open_sanslight';
+  font-size: 15px;
+  line-height: 22px;
+  text-align:left;
+  color: #484743;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#promotional_box #image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*-------------------------*/
+
+/* About projects */
+#aboutProject_promotional{
+  background-color: #549db9;
+  height: 90px;
+  text-align: center;
+}
+
+#aboutProject_promotional h2{
+  line-height: 45px;
+  letter-spacing: 1px;
+  font-size: 170%;
+  color: white;
+  font-family: GeosansLight;
+
+}
+
+#aboutProject_promotional img{
+  position: relative;
+  left: 10px;
+}
+/*About projects ends*/
+
+
+
+/*Responsive Desgin */
+@media only screen and (max-width:1023px) {
+    .promotional_banner .promotional_banner_text {
+        font-size: 26px;
+        top: 28%;
+    }
+
+    #promotional_page .md-tab:nth-child(n+6) {
+        margin-top: 60px;
+        position: relative;
+        left: 0px;
+    }
+
+    #promotional_page .promotional_tab md-content md-tabs md-tabs-canvas {
+        height: 80px;
+        margin-bottom: 0px;
+    }
+
+    #promotional_page .promotional_tab md-content {
+        margin-bottom: 30px;
+        height: 130px;
+    }
+
+    #promotional_page .md-tab {
+        overflow: visible;
+        width: 50px;
+        height: 50px;
+        margin: 0 150px;
+        border-radius: 100%;
+        background-color: #549db9;
+    }
+
+    #promotional_page .md-tab:nth-child(1){ margin-left: 0px;}
+    #promotional_page .md-tab:nth-child(2){ margin-right: 0px;}
+
+
+    #promotional_page md-pagination-wrapper {
+        position: relative;
+        width: 460px !important;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+
+
+}
+
+
+@media only screen and (max-width:959px) {
+    .promotional_tab md-content {
+        height: 100%;
+    }
+    #promotional_box p {
+        padding: 0 40px;
+    }
+
+    #promotional_page .md-tab:nth-child(1){ margin-left: 0px;}
+    #promotional_page .md-tab:nth-child(2){ margin-right: 0px;}
+
+
+    #promotional_page md-pagination-wrapper {
+        width: 440px !important;
+        margin-top: 5px;
+    }
+
+    #promotional_page .md-tab {
+        margin: 0 170px;
+    }
+
+    #promotional_box:nth-child(n+1){
+        -webkit-flex-direction:column;
+          -ms-flex-direction:column;
+              flex-direction:column;
+    }
+
+    #promotional_box:nth-child(n+1) .promotional_item{
+      -webkit-flex-direction:column;
+          -ms-flex-direction:column;
+              flex-direction:column;
+    }
+
+    #promotional_box #image{
+      margin-bottom: 20px;
+    }
+
+}
+
+@media only screen and (max-width:870px) {
+    .promotional_banner .promotional_banner_text {
+        font-size: 24px;
+        top: 25%;
+        padding: 20px;
+    }
+
+    #promotional_page .md-tab:nth-child(1){ margin-left: 0px;}
+    #promotional_page .md-tab:nth-child(2){ margin-right: 0px;}
+
+    #promotional_page md-pagination-wrapper {
+        width: 400px !important;
+        margin-top: 5px;
+    }
+    #promotional_page .md-tab {
+        margin: 0 150px;
+    }
+}
+
+
+@media only screen and (max-width:767px) {
+    .promotional_banner .promotional_banner_text {
+        font-size: 24px;
+        top: 25%;
+        padding: 20px;
+    }
+
+    #promotional_page .md-tab:nth-child(1){ margin-left: 0px;}
+    #promotional_page .md-tab:nth-child(2){ margin-right: 0px;}
+
+    #promotional_page md-pagination-wrapper {
+        width: 380px !important;
+        margin-top: 5px;
+    }
+    #promotional_page .md-tab {
+        margin: 0 140px;
+    }
+
+}
+
+@media only screen and (max-width:599px) {
+    .promotional_banner .promotional_banner_text {
+        font-size: 20px;
+        top: 25%;
+        padding: 20px;
+    }
+
+    #promotional_page .md-tab:nth-child(1){ margin-left: 0px;}
+    #promotional_page .md-tab:nth-child(2){ margin-right: 0px;}
+
+    #promotional_page md-pagination-wrapper {
+        width: 350px !important;
+        margin-top: 5px;
+    }
+
+
+    #promotional_page .md-tab {
+        margin: 0 125px;
+    }
+
+    #promotional_page .promotional_tab md-content md-tabs md-tabs-canvas {
+        height: 200px;
+        margin-bottom: 25px;
+
+    }
+
+    .promotional_tab md-content {
+        height: 500px;
+        overflow: visible;
+        margin-bottom: 25px;
+    }
+
+}
+
+@media only screen and (max-width:479px) {
+    .promotional_banner {
+        height: 230px;
+    }
+    .promotional_banner .promotional_banner_text {
+        font-size: 18px;
+        top: 20%;
+    }
+    #promotional_page section {
+        margin-top: 280px;
+    }
+
+    #promotional_page .md-tab:nth-child(1){ margin-left: 0px;}
+    #promotional_page .md-tab:nth-child(2){ margin-right: 0px;}
+
+    #promotional_page md-pagination-wrapper {
+        width: 280px !important;
+        margin-top: 5px;
+    }
+
+    #promotional_page .promotional_tab md-content md-tabs md-tabs-canvas {
+        height: 200px;
+        margin-bottom: 25px;
+
+    }
+
+    .promotional_tab md-content {
+        height: 500px;
+        overflow: visible;
+        margin-bottom: 25px;
+    }
+
+    #promotional_page .md-tab {
+        margin: 0 90px;
+    }
+
+
+
+}
+
+@media only screen and (max-width:359px) {
+    .promotional_banner .promotional_banner_text {
+        top: 15%;
+    }
+
+    #aboutProject_promotional h2{
+      line-height: 45px;
+      letter-spacing: 2px;
+      font-size: 150%;
+      color: white;
+      font-family: GeosansLight;
+
+    }
+
+
+
+}

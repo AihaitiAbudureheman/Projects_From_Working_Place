@@ -1,0 +1,129 @@
+<div layout="column">
+    <!-- Social networks links --> 
+    <div layout="row" class="social_networks">
+        <ul layout="row" layout-wrap layout-align="center center">
+            <li class="linkedin">
+                <a target="_blank" href="https://www.linkedin.com/company/wiredelta">
+                    <span>
+                                <img src="images/footer/linkedin.png" alt="Logo LinkedIn">
+                            </span>
+                </a>
+            </li>
+            <li class="googleplus">
+                <a target="_blank" href="https://plus.google.com/+Wiredelta/about">
+                    <span>
+                                <img src="images/footer/google+.png" alt="Logo Google +">
+                            </span>
+                </a>
+            </li>
+            <li class="facebook">
+                <a target="_blank" href="https://www.facebook.com/wiredelta">
+                    <span>
+                                <img src="images/footer/facebook.png" alt="Logo Google +">
+                            </span>
+                </a>
+            </li>
+            <li class="twitter">
+                <a target="_blank" href="https://twitter.com/WiredeltaInc">
+                    <span>
+                                <img src="images/footer/twitter.png" alt="Logo Twitter">
+                            </span>
+                </a>
+            </li>
+            <li class="pinterest">
+                <a target="_blank" href="http://www.pinterest.com/wiredelta">
+                    <span>
+                                <img src="images/footer/pinterest.png" alt="Logo Pinterest">
+                            </span>
+                </a>
+            </li>
+            <li class="angel">
+                <a target="_blank" href="https://angel.co/wiredelta">
+                    <span>
+                                <img src="images/footer/angelist.png" alt="Logo Angel">
+                            </span>
+                </a>
+            </li>
+            <li class="stackoverflow">
+                <a target="_blank" href="http://careers.stackoverflow.com/company/wiredelta">
+                    <span>
+                               <img src="images/footer/stackoverflow.png" alt="Logo Stackoverflow">
+                            </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- end/Social networks links -->
+    <!-- Animation part -->
+    <div layout="row" layout-xs="column" class="animations" layout-align="center center">
+        <div layout="row" layout-xs="column" class="footer_container">
+            <div layout="column" flex="25" flex-xs="100" class="left">
+                <div ng-click="footerVideo1();" class="img_animate first">
+                    <img src="images/footer/showreel.png" alt="Play Wiredelta Video Button" class="play_reel">
+                    <span>{{'showreel'  | translate }}</span>
+                </div>
+                <span class="reel_hide mobile_hide"></span>
+                <img src="images/footer/showreel_ray.png" alt="" class="showreel_ray mobile_hide">
+            </div>
+            <div layout="column" class="footer_middle" flex="50" flex-xs="100" layout-padding layout-align="center center" style="position:relative;">
+                <img src="images/footer/wd_logo1.png" class="ft_logo" alt="wiredelta logo 1">
+                <img src="images/footer/wd_logo2.png" class="logo_hover mobile_hide" alt="wiredelta logo 2">
+                <p class="footer_motto">{{'transform' | translate}}</p>
+                <span class="logo_hide mobile_hide"></span>
+                <!--/.logo_hide-->
+                <img src="images/footer/logo_ray.png" class="logo_ray mobile_hide" alt="wiredelta man ray">
+                <img src="images/footer/wd_men.png" class="wd_men mobile_hide" alt="wiredelta man logo">
+            </div>
+            <div layout="column" flex="25" flex-xs="100" class="right" layout-align="end end">
+                <div ng-click="footerVideo2();" class="img_animate second">
+                    <img src="images/footer/Working@WD.png" alt="Work at Wiredelta">
+                    <span>{{'working'  | translate}}</span>
+                </div>
+                <div class="working_ray mobile_hide">
+                    <img src="images/footer/working_ray.png" alt="working wiredelta man ray">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end/Animation part -->
+    <!-- Copyright part -->
+    <div layout="row" class="footer_bottom" layout-align="center center">
+        <div layout="row" layout-xs="column" class="copyright" layout-padding layout-align="center center">
+            <div flex layout="row" layout-align="start start">
+                <ul>
+                    <li>
+                        <a ui-sref="about({langcode:language})">About</a>
+                    </li>
+                    <li id="footJobs">
+                        <a ui-sref="jobs({langcode:language})" ui-sref-opts="{reload: true}">{{'jobs'  | translate}}</a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/media/set/?set=a.426884267409490.1073741839.186406474790605&amp;type=3" target="_blank">Press</a>
+                    </li>
+                </ul>
+            </div>
+            <div flex layout="column" layout-align="center center">
+                <span>{{ 'copyright'  | translate}}</span>
+                <span>{{ 'rights'  | translate}}</span>
+                <ul>
+                    <li>
+                        <a href="assets/pdf/PrivacyPolicy.pdf" target="_blank">{{ 'policy'  | translate}}</a>
+                    </li>
+                    <li>
+                        <a href="assets/pdf/TermsandConditions.pdf" target="_blank">
+                            {{'terms'  | translate}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div flex layout="row" layout-align="end end">
+                <a href="/#">
+                    <img src="images/footer/footer_bottom1.png" alt="Wiredelta" class="footer_button">
+                </a>
+                <a scrolltop>
+                    <img src="images/footer/footer_bottom2.png" alt="Wiredelta" class="scrollup footer_button" ng-click="scrollToTheTop();">
+                </a>
+            </div>
+        </div>
+        <!-- end/Copyright part -->
+    </div>
+</div>

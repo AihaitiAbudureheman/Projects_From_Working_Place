@@ -1,0 +1,127 @@
+<update-title title="{{text.jobs_meta_title}}"></update-title>
+<update-meta name="description" content="{{text.jobs_meta_description}}"></update-meta>
+
+<md-content id="job_detail" class="jobs_page" flex>
+    <!-- working at wiredelta banner starts here -->
+    <div layout="row" layout-align="center center">
+        <div layout="column">
+            <p class="work_at_wd">{{text.working_at_wd_banner}}</p>
+            <md-divider class="banner_hr"></md-divider>
+            <div layout="row" layout-align="center center" ng-click="playVideo();">
+                <img class="play_video" src="../images/jobs/play.png" alt="working at WD" />
+            </div>
+        </div>
+    </div>
+    <!-- working at wiredelta banner ends here -->
+    <!-- working at wiredelta text starts here -->
+    <div layout="column" layout-align="center center" id="job_head">
+        <h1 class="job_headers">{{text.working_at_wd_text}}</h1>
+        <p class="with_us_desc" ng-bind-html=text.text></p>
+    </div>
+    <!-- working at wiredelta text ends here -->
+    <!-- Job Details starts here -->
+    <div class="job_container" layout="column">
+        <!-- sticky header starts -->
+        <div class="sticky_header" layout="column">
+            <h1 class="job_headers" layout="row" layout-align="center center">{{text.job_openings_header}}</h1>
+            <div sticky offset="60" sticky-class="imSoSticky" layout="column">
+                <div layout="row" class="sticky_bar" layout-align="space-around center" layout-align-md="space-around center" layout-align-sm="space-around center" layout-align-xs="space-around center" layout-wrap>
+                    <a ng-mouseenter="hover = true" ng-mouseleave="hover = false" class="job_openings" layout="column" layout-align="center center" ng-repeat="opening in text.jobopenings" ng-click="goBack(opening.id_to_scroll_to,{langcode:language})" scroll-on-click du-smooth-scroll du-scrollspy>
+                        <img class="job_opening_img" ng-class="{resize: hover}" ng-src="{{opening.img}}" />
+                        <span class="img_name" ng-class="{hiden: hover}">{{opening.name}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- sticky header ends -->
+        <!-- Job Details starts-->
+        <div class="job_details" layout="column" layout-align="center center" id="{{job.jsonfile}}">
+            <h1>{{job.group}}</h1>
+            <md-divider></md-divider>
+            <h2>{{job.title}}</h2>
+            <button ng-click="open($event)">APPLY NOW</button>
+        </div>
+        <!-- Container -->
+        <div class="job_body">
+            <!-- Job introduction starts -->
+            <div class="intro" layout="column" layout-align="center start">
+                <div>
+                    Introduction:
+                </div>
+                <div>
+                    {{job.introduction}}
+                </div>
+            </div>
+            <!-- Job introduction ends -->
+            <!-- Job Mission and profile starts -->
+            <div class="mission" layout="column" layout-align="center start">
+                <div>
+                    Mission & Profile:
+                </div>
+                <!-- first section - meet Person starts -->
+                <div ng-show="meet" class="fadein fadeout" layout-gt-md="row" layout-md="column" layout-sm="column" layout-xs="column" layout-align="center center" flex=100>
+                    <div layout="column" flex=20 flex-md=100 flex-sm=100 flex-xs=50 layout-align="center center">
+                        <img class="profile_pic" ng-src={{job.person_img}} />
+                    </div>
+                    <div class="meet_person" layout="column" layout-align="center center" flex=80 flex-md=100 flex-sm=100>
+                        <div>
+                            Our mascot Wiredman is interviewing {{job.person_name2}} about their experience as a {{job.title}}
+                        </div>
+                        <md-button ng-click="go()">
+                            MEET {{job.person_name}}
+                        </md-button>
+                    </div>
+                </div>
+                <!-- first section - meet Person ends -->
+                <!-- Second section - Q&A starts -->
+                <div ng-show="interview" class="interview fadein fadeout" layout-gt-md="column" flex=100 flex-xs=50>
+                    <div layout="row" layout-align="start center">
+                        <div></div>
+                        <div layout="row" layout-align="center center" flex=50 ng-bind-html="interview_question"></div>
+                    </div>
+                    <div layout="row" layout-align="end center">
+                        <div layout="column" flex=50 flex-sm="100" flex-xs="60" ng-bind-html="interview_answer"></div>
+                        <div class="person_img"></div>
+                    </div>
+                    <div layout="row" class="direction-btn" layout-align="end center">
+                        <md-button ng-click="go('goToMain')">Prev</md-button>
+                        <md-button ng-click="go('showQA')">Next</md-button>
+                    </div>
+                </div>
+                <!-- Second section - Q&A ends -->
+                <!-- Third section - Apply now starts -->
+                <div ng-show="apply" class="apply fadein fadeout" layout-gt-md="column" flex=100>
+                    <div layout="column" layout-align="center center">
+                        <div>
+                            Interested in this position?
+                        </div>
+                        <div>
+                            Don't Hesitate!
+                        </div>
+                        <div>
+                            <md-button class="apply1" ng-click="open($event)">Apply Now</md-button>
+                        </div>
+                    </div>
+                    <div layout="row" class="direction-btn1" layout-align="end center">
+                        <md-button ng-click="go('showQA')">Prev</md-button>
+                        <md-button ng-click="go('backToStart')">Back to Start</md-button>
+                    </div>
+                </div>
+                <!-- Third section - Apply now ends -->
+            </div>
+            <!-- Job Mission and profile ends -->
+            <!-- Job Practiocal details starts -->
+            <div class="practical_details" layout="column" layout-align="center start">
+                <div>
+                    Practical Details:
+                </div>
+                <div>
+                    <div ng-repeat="detail in job.practical_details">{{detail}}</div>
+                </div>
+            </div>
+            <!-- Job Practiocal details ends -->
+        </div>
+        <!-- End Container -->
+        <!-- Job Details ends-->
+    </div>
+</md-content>

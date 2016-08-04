@@ -1,0 +1,55 @@
+<update-title title="{{'technologies_meta_title' | translate}}"></update-title>
+<update-meta name="description" content="{{'technologies_meta_description' | translate}}"></update-meta>
+
+<div id="technology_page">
+   <!-- Banner Section -->
+   <div class="technology-banner">
+       <img ng-src="images/services/technologies/{{'Technologies_bannerimage' | translate}}.jpg" class="img-responsive" alt="{{'Technologies_imagetext' | translate}}">
+       <h1 class="technology_banner_text">{{'technologies_heading1' | translate}}<br /><br />{{'technologies_heading2' | translate}}</h1>
+   </div>
+   <!--End of Banner Section -->
+   <section id="technologies">
+       <!-- Title And Sub-Title Sction -->
+       <div layout-align="center center" layout="column" class="technology_title_section">
+           <div class="scroll_down" layout-align="center" layout="row">
+               <md-icon md-svg-icon="images/icons/ic_keyboard_arrow_down_black_48px.svg" id="down" du-smooth-scroll="down" offset="30" duration="800"></md-icon>
+           </div>
+           <h1 layout-align="center" layout="row">{{'Technologies_title' | translate}}</h1>
+           <p>{{'Technologies_description' | translate}}</p>
+       </div>
+       <!-- End of Title And Sub-Title Sction -->
+
+       <!-- Main content area-->
+       <div class="technology_tabs">
+
+         <!--Technologies title with full width-->
+         <div flex id="small-title">
+           <h1>{{'Technologies_title' | translate}}</h1>
+         </div>
+
+         <!--List of technologies here-->
+           <md-list layout="row" layout-align="center"  layout-xs="column" layout-sm="column" layout-wrap  ng-init="sub_items=[0, 1, 2]">
+               <md-list-item  flex  ng-repeat="list_item in sub_items" ng-if="('technologies.'+ list_item +'.add_class' | translate) == 'true'" id="tech_item">
+                   <div flex class="technology_box">
+                     <img ng-src="images/services/technologies/{{'technologies.'+ list_item +'.img' | translate}}.png" class="tech_leave" alt="{{'technologies.'+ list_item +'.heading' | translate}}">
+                     <h4 class="tech_leave_title">{{'technologies.'+ list_item +'.heading' | translate}}</h4>
+                     <p>{{'technologies.'+list_item +'.description' | translate}}</p>
+                     <md-button ui-sref="{{'technologies.'+list_item+'.url' | translate}}({langcode:language})" class="technology_btn">{{ 'technologies_button' | translate }}</md-button>
+                 </div>
+               </md-list-item>
+           </md-list>
+       <!-- End of technologies list -->
+
+     <div layout="row" id="tech_aboutProject">
+       <div flex>
+         <a ui-sref="{{'about_project_url' | translate}}({langcode:language})" target="_blank"><h2>{{'about_project' | translate}}<img ng-src="images/services/technologies/{{'technologies_arrow' | translate}}.png"  alt="{{'technologies_arrow_alt' | translate}}"> </h2></a>
+       </div>
+     </div>
+   <!--end of commented section-->
+
+
+
+       </div>
+   </section>
+   <!--End of section-->
+</div>

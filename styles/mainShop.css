@@ -1,0 +1,486 @@
+/**************** GENERAL ****************/
+
+@font-face {
+    font-family: 'colaborate-mediumregular';
+    src: url('fonts/colaborate_medium/ColabMed-webfont.woff');
+}
+
+@font-face {
+    font-family: 'colaborate-thinregular';
+    src: url('fonts/colaborate_thin/ColabThi-webfont.woff');
+}
+
+@font-face {
+    font-family: 'colaboratelightregular';
+    src: url('fonts/colaborate_light/ColabLig-webfont.woff');
+}
+
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('fonts/opensans_regular/OpenSans-Regular-webfont.woff');
+}
+
+@font-face {
+    font-family: open_sanslight;
+    src: url('fonts/OpenSans-Light-webfont.woff');
+}
+
+@font-face {
+    font-family: 'GeosansLight';
+    src: url('fonts/geosans_light/GeosansLight.woff');
+}
+
+@font-face {
+    font-family: OxygenLight;
+    src: url('fonts/oxygen-light.woff');
+}
+
+@font-face {
+    font-family: HelveticaNeueCondensedBold;
+    src: url('fonts/helveticaneuecondensedbold.woff');
+}
+
+
+/*--Remove the blue otline in chrome--*/
+
+button:focus {
+    outline: 0;
+}
+
+div:focus {
+    outline: 0;
+}
+
+html {
+    height: auto;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: initial !important;
+    z-index: 2;
+}
+
+h1 {
+    -webkit-font-smoothing: antialiased;
+}
+
+a:hover,
+a:active,
+a:focus,
+a:visited {
+    text-decoration: none !important;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.close_button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak {
+    display: none;
+}
+
+
+/*--end/GENERAL--*/
+
+
+/*--TOOLBAR--*/
+
+#more_menu{
+    z-index: 1;
+    font-family: 'colaborate-thinregular';
+}
+
+input, select, textarea{
+    color: #000000;
+}
+
+header md-toolbar {
+    max-height: 64px;
+    position: fixed;
+    padding: 0 25px;
+    background-color: #484743 !important;
+    top: 0;
+    z-index: 1200;
+}
+
+header md-toolbar .menu.hideMenu,
+header md-toolbar .showMenu {
+    display: flex;
+}
+
+header md-toolbar .hideMenu,
+header .menu_icon,
+header md-toolbar .menu a.item hr,
+header md-toolbar .menu a.item:hover hr,
+header md-toolbar .menu a.item:active hr,
+header md-toolbar .menu a.item:visited hr {
+    display: none;
+}
+
+header md-toolbar .menu .item:active {
+    border: none !important;
+}
+
+header md-toolbar .menu .item:hover {
+    background-color: #FFF;
+}
+
+.header_layout {
+    padding: 5px 8px !important;
+}
+
+header md-toolbar .menu a.item {
+    position: relative;
+    color: #FFF;
+    font-size: 14px;
+    font-family: 'colaboratelightregular', sans-serif;
+    padding: 0px 40px;
+}
+
+header md-toolbar .menu a.item:hover {
+    color: #000;
+    -webkit-transition: background .2s linear;
+    -moz-transition: background .2s linear;
+    -ms-transition: background .2s linear;
+    -o-transition: background .2s linear;
+    transition: background .2s linear;
+}
+
+header .expanded_menu {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+header md-toolbar .menu a.item:focus hr {
+    display: block;
+    position: absolute;
+    margin-top: 5%;
+    left: 39%;
+    border: 0;
+    border-top: 3px solid #fff;
+    width: 25px;
+}
+
+header md-toolbar .menu .item_button {
+    margin-right: 15px;
+    width: 26px;
+}
+
+header .expanded_menu span {
+    text-align: center;
+    color: #549db9;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+header .expanded_menu .menu_img {
+    width: 60px;
+    height: 60px;
+}
+
+header .expanded_menu .hover_menu_img {
+    width: 65px;
+    height: 65px;
+}
+
+header .expanded_menu .flag {
+    width: 89px;
+}
+
+header .expended_menu .flag_hover {
+    width: 100px;
+}
+
+
+/*--end/TOOLBAR--*/
+
+
+/*--FOOTER--*/
+
+footer,
+footer a {
+    font-family: 'colaboratelightregular', sans-serif;
+    color: #7b797a;
+    position: relative;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #FFF;
+}
+
+footer .copyright ul:first-child a,
+footer .copyright span:first-child {
+    font-size: 16px;
+    text-align: center;
+}
+
+footer .social_networks,
+footer .copyright {
+    background-color: #262223;
+}
+
+footer .copyright ul li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+footer .copyright ul li:first-child {
+    border-right: 1px solid #7b797a
+}
+
+footer .footer_button {
+    border-radius: 100%;
+    background-color: #322e2f;
+    margin-left: 15px;
+}
+
+footer .footer_button:hover {
+    background-color: #6fbec5;
+    transition-duration: 0.5s;
+}
+
+footer .social_networks {
+    height: 84px;
+}
+
+footer .social_networks ul li {
+    float: left;
+    height: 84px;
+    overflow: hidden;
+    line-height: 0!important;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+footer .social_networks a {
+    padding: 26px 0;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    top: 0;
+    line-height: 30px;
+    display: block;
+}
+
+footer .social_networks span {
+    padding: 0 24px;
+    display: block;
+    overflow: hidden;
+}
+
+footer .social_networks ul li:nth-child(n+2) a span {
+    border-left: 1px solid #484743;
+}
+
+footer .social_networks .linkedin:hover {
+    background-color: #007BB6;
+}
+
+footer .social_networks .googleplus:hover {
+    background-color: #DD4B39;
+}
+
+footer .social_networks .facebook:hover {
+    background-color: #3C599B;
+}
+
+footer .social_networks .twitter:hover {
+    background-color: #55ACEE;
+}
+
+footer .social_networks .pinterest:hover {
+    background-color: #D91517;
+}
+
+footer .social_networks .angel:hover {
+    background-color: #000;
+}
+
+footer .social_networks .stackoverflow:hover {
+    background-color: #f37a20;
+}
+
+footer .animations {
+    height: 200px;
+    background-color: #3A3637;
+}
+
+footer .animations .footer_container {
+    width: 1068px !important;
+}
+
+footer .animations span {
+    padding-top: 10px;
+}
+
+footer .animations span.quote {
+    text-align: center;
+    font-size: 20px;
+    color: #FFF;
+}
+
+footer .animations .video {
+    z-index: 1;
+}
+
+footer .animations .video img {
+    cursor: pointer;
+}
+
+footer .animations .main_logo_ray,
+footer .animations .main_logo {
+    width: 155px;
+}
+
+footer .animations .showreel_ray {
+    position: absolute;
+    bottom: 25px;
+    right: -460px;
+    width: 697px;
+    height: 147px;
+    z-index: 0;
+}
+
+footer .animations .logo_ray {
+    position: absolute;
+    bottom: 51px;
+    right: 45px;
+    z-index: 0;
+}
+
+footer .animations .working_ray {
+    position: absolute;
+    top: 7px;
+    left: 30px;
+    z-index: 0;
+}
+
+footer .animations .WD_superhero {
+    position: absolute;
+    top: 0;
+    right: -65px;
+}
+
+
+/*--end/FOOTER--*/
+
+
+/*--@MEDIA QUERIES--*/
+
+
+/*--When the menu can't be well displayed--*/
+
+@media only screen and (max-width: 1280px) {
+    /* Fixes for browser who doesn't support flex */
+    header md-toolbar.layout-sm-column,
+    header md-toolbar .menu.layout-xs-column {
+        display: block;
+    }
+    header md-toolbar {
+        position: relative;
+    }
+    header .menu_icon {
+        display: block;
+    }
+    header md-toolbar .menu.hideMenu {
+        display: none;
+    }
+    header md-toolbar .menu {
+        margin: -5px -25px 0 -25px;
+        background-color: #484743;
+        padding-bottom: 10px;
+        align-content: center;
+        align-items: center;
+    }
+    header md-toolbar .menu .item_button {
+        height: 70px;
+        
+    }
+    header md-toolbar .menu a {
+        height: 70px;
+    }
+    header .expanded_menu {
+        position: relative;
+        margin-top: -68px;
+    }
+    header .expanded_menu_item {
+        padding-bottom: 53px;
+    }
+    footer .animations .footer_container {
+        width: 100% !important;
+    }
+    footer .animations .WD_superhero,
+    footer .animations .showreel_ray,
+    footer .animations .working_ray,
+    footer .animations .logo_ray,
+    footer .animations .main_logo_ray {
+        display: none;
+    }
+    footer .animations .main_logo {
+        display: block !important;
+    }
+}
+
+
+/*--When the map can't be well displayed--*/
+
+@media only screen and (max-width: 959px) {
+    /*--Overwrite a rule of Angular Material--*/
+    header md-toolbar {
+        min-height: 64px !important;
+    }
+}
+
+
+/*--Phone size--*/
+
+@media only screen and (max-width: 768px) {
+    footer .social_networks,
+    footer .animations {
+        height: auto;
+    }
+}
+
+
+/*--Phone with small screen--*/
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+    footer .animations img {
+        width: 100%;
+    }
+}
+
+
+/*--END/@MEDIA QUERIES--*/
+
+
+/*--OVERWRITING BOOTSTRAP CSS--*/
+
+.modal-header {
+    padding: 0;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 0;
+}

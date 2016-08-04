@@ -1,0 +1,59 @@
+
+.view_wrapper{
+    margin:492px 0 0;
+}
+.view_wrapper section{
+	position:relative;
+}
+/*--Banner styling starts--*/
+section.banner_sec{
+	position:fixed;
+	width:100%;
+	top:64px;
+	background:url(../images/main/banner_img.jpg)no-repeat center;
+	background-size:cover;
+	text-align:center;
+}
+.banner_sec h1{
+	font-family: 'GeosansLight';
+	font-size:36px;
+	color:#fff;
+	line-height:36px;
+	margin:66px 0 13px;
+}
+
+.banner_sec h3{
+	font-family: 'GeosansLight';
+	font-size:24px;
+	color:#fff;
+	line-height:36px;
+	margin:0 0 22px;
+}
+
+.banner_sec img{
+	max-width:100%;
+}
+
+.desc_sec
+{
+	display:block;
+	background-color:#f2f2f2;
+	text-align:center;
+	padding: 38px 14%;
+}
+
+.desc_sec h1{
+	font-family: 'GeosansLight';
+	font-size:30px;
+	color:#484743;
+	line-height:36px;
+	margin:8px 0 24px;
+}
+
+.desc_sec p{
+	font-family: 'open_sanslight';
+	font-size:14px;
+	color:#3a3637;
+	line-height:26px;
+	margin:0 0 3px;
+}

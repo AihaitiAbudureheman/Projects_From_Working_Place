@@ -1,0 +1,171 @@
+<md-toolbar layout="row" layout-xs="column" layout-sm="column" layout-md="column" class="fixed-top">
+  <div flex-xs="100" flex-sm="100" layout="row" layout-padding layout-align="center" class="header_layout">
+    <!-- Logo Wiredelta -->
+    <a href="/">
+      <img src="/images/toolbar/wd_logo.png" alt="Wiredelta logo" hide-xs>
+      <img src="/images/toolbar/res_logo_2.png" alt="Wiredelta logo" hide-gt-xs>
+    </a>
+    <!-- end/Logo Wiredelta -->
+    <span flex hide-gt-sm></span>
+    <md-button class="md-icon-button menu_icon" aria-label="Mobile menu" ng-click="openMenu = !openMenu">
+      <md-icon md-svg-icon="images/icons/ic_menu_white_24px.svg"></md-icon>
+    </md-button>
+  </div>
+  <span flex hide-xs></span>
+
+  <!-- Menu -->
+  <div layout="row" layout-xs="column" layout-sm="column" layout-md="column" layout-lg="row" layout-md="row" class="menu" ng-class="{'showMenu': openMenu, 'hideMenu': !openMenu}">
+    <a ui-sref="main({langcode:language})" ng-class="{active: location.path() == '/main'}" layout="row" layout-padding layout-align="center center" class="item" ng-click="openMenu = !openMenu">
+            {{ 'home' | translate}}
+          </a>
+    <!--
+          <a ui-sref="about({langcode:language})" ng-class="{active: location.path() == '/about'}" layout="row" layout-padding layout-align="center center" class="item" ng-click="openMenu = !openMenu">
+            {{'about' | translate}}
+            <hr ng-class="{active:isActive('about')}">
+          </a>
+          -->
+    <a ui-sref="process({langcode:language})" layout="row" layout-padding layout-align="center center" class="item" ng-click="openMenu = !openMenu">
+            {{ 'process' | translate}}
+          </a>
+    <a ui-sref="services({langcode:language})" layout="row" layout-padding layout-align="center center" class="item" ng-click="openMenu = !openMenu">
+            {{ 'service' | translate}}
+          </a>
+    <a ui-sref="references({langcode:language})" layout="row" layout-padding layout-align="center center" class="item" ng-click="openMenu = !openMenu">
+            {{ 'reference' | translate}}
+          </a>
+    <a ui-sref="contact({langcode:language})" layout="row" layout-padding layout-align="center center" class="item" ng-click="openMenu = !openMenu">
+            {{ 'contact' | translate}}
+          </a>
+
+    <!-- NEW BLOG AND SHOP BUTTONS FOR WDC
+          <a ui-sref="contact({langcode:language})" layout="row" layout-padding layout-align="center center" class="item" ng-click="openMenu = !openMenu">
+            BLOG
+            <hr ng-class="{active:isActive('contact')}">
+          </a>
+          <a ui-sref="shop({langcode:language})" layout="row" layout-padding layout-align="center center" class="item" ng-click="openMenu = !openMenu">
+            SHOP
+            <hr ng-class="{active:isActive('shop')}">
+          </a>
+          -->
+
+    <div class="header_buttons" layout="row" layout-align-xs="center center" layout-align-sm="center center" layout-align-md="center center" layout-wrap>
+      <!--
+              <div layout-align="center center" class="item_button menu_open">
+                  <ul>
+                      <li ng-click="openMore = !openMore" ng-show="!openMore">
+                          <img src="/images/toolbar/dots.png" alt="More">
+                      </li>
+                      <li ng-click="openMore = 'false'" ng-show="openMore">
+                          <img src="/images/toolbar/dots.png" alt="More">
+                      </li>
+                  </ul>
+              </div>
+              -->
+      <div layout-align="center center" class="item_button menu_open">
+        <ul>
+          <li ng-click="openMore = !openMore" ng-show="!openMore">
+            <img src="/images/toolbar/loginaccount.png" alt="Login">
+          </li>
+          <li ng-click="openMore = 'false'" ng-show="openMore">
+            <img src="/images/toolbar/loginaccount.png" alt="Login">
+          </li>
+        </ul>
+      </div>
+      <div layout-align="center center" class="item_button language_open">
+        <ul>
+          <li ng-click="openLanguage = !openLanguage" ng-show="!openLanguage">
+            <img src="/images/toolbar/language.png" alt="Language">
+          </li>
+          <li ng-click="openLanguage = 'false'" ng-show="openLanguage">
+            <img src="/images/toolbar/language.png" alt="Language">
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--/header_buttons-->
+    <!-- old open more menu
+          <div layout="row" layout-align="center center" ng-show="openMore" class="expanded_menu_item" id="more_menu">
+              <div ng-show="openMore" class="expanded_menu" layout="row" layout-padding layout-align="center center" click-outside="openMore = !openMore" outside-if-not="more_menu">
+                  <div flex="50" flex-xs="100" layout="row">
+                      <div layout="row" flex="25" layout-align="center center">
+                          <a ui-sref="shop">
+                              <img src="images/toolbar/shop_en.png" class="menu_img" ng-hide="shop_hover" ng-mouseover="shop_hover ='true'">
+                              <img src="images/toolbar/shop_en_hover.png" class="hover_menu_img" ng-show="shop_hover" ng-mouseleave="shop_hover =!shop_hover" ng-click="openMenu = !openMenu;openMore = !openMore">
+                          </a>
+                      </div>
+                      <div layout="row" flex="25" layout-align="center center">
+                          <a ui-sref="pricing({langcode:language})">
+                              <img src="images/toolbar/pricing_en.png" class="menu_img" ng-hide="pricing_hover" ng-mouseover="pricing_hover ='true'">
+                              <img src="images/toolbar/pricing_en_hover.png" class="hover_menu_img" ng-show="pricing_hover" ng-mouseleave="pricing_hover =!pricing_hover" ng-click="openMenu = !openMenu;openMore = !openMore">
+                          </a>
+                      </div>
+                      <div layout="row" flex="25" layout-align="center center">
+                          <a href="https://www.facebook.com/media/set/?set=a.426884267409490.1073741839.186406474790605&amp;type=3" target="_blank">
+                              <img src="images/toolbar/press_en.png" class="menu_img" ng-hide="press_hover" ng-mouseover="press_hover ='true'">
+                              <img src="images/toolbar/press_en_hover.png" class="hover_menu_img" ng-show="press_hover" ng-mouseleave="press_hover =!press_hover" ng-click="openMenu = !openMenu;openMore = !openMore">
+                          </a>
+                      </div>
+                      <div layout="row" flex="25" layout-align="center center">
+                          <a ui-sref="jobs({langcode:language})">
+                              <img src="images/toolbar/jobs_en.png" class="menu_img" ng-hide="jobs_hover" ng-mouseover="jobs_hover ='true'">
+                              <img src="images/toolbar/jobs_en_hover.png" class="hover_menu_img" ng-show="jobs_hover" ng-mouseleave="jobs_hover =!jobs_hover" ng-click="openMenu = !openMenu;openMore = !openMore">
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          -->
+    <div layout="row" layout-align="center center" ng-show="openMore" class="expanded_menu_item" id="more_menu">
+      <div ng-show="openMore" class="expanded_menu" layout="row" layout-padding layout-align="center center" click-outside="openMore = !openMore" outside-if-not="more_menu">
+        <form method="post" action="http://platform.wiredelta.com/dologin.php">
+          <md-content md-theme="loginTheme" class="loginWrapper">
+            <div>
+              <md-input-container>
+                <label style="border-color:white; color:#549db9; font-family: 'colaborate-thinregular' !important;">Email Address</label>
+                <input id="emailInput" type="text" name="username" style="border-color:white; color:white; font-family: 'colaborate-thinregular' !important;"></input>
+              </md-input-container>
+              <md-input-container>
+                <label style="border-color:white; color:#549db9; font-family: 'colaborate-thinregular' !important;">Password</label>
+                <input id="passwordInput" type="password" name="password" autocomplete="off" style="border-color:white; color:white; font-family: 'colaborate-thinregular' !important;"></input>
+              </md-input-container>
+              <md-input-container>
+                <input type="submit" value="Login" style="border-color:transparent; color:white; font-family: 'colaborate-thinregular' !important;"></input>
+              </md-input-container>
+            </div>
+          </md-content>
+        </form>
+      </div>
+    </div>
+
+    <div layout="row" layout-align="center center" ng-show="openLanguage" class="expanded_menu_item" id="language_menu">
+      <!-- Expanded Menu - Language -->
+      <div ng-show="openLanguage" class="expanded_menu" layout="row" layout-align="center center" click-outside="openLanguage = !openLanguage" outside-if-not="language_menu">
+        <div layout="column" flex="100">
+          <span>Choose your language</span>
+          <ul class="language_list" layout="row" layout-align="center center" layout-wrap>
+            <li>
+              <a ng-click="toggleLanguage('en')">
+                <img src="images/toolbar/english.png" ng-hide="english_hover" ng-mouseover="english_hover ='true'" class="flag">
+                <img src="images/toolbar/english_hover.png" ng-show="english_hover" ng-mouseleave="english_hover =!english_hover" ng-click="openMenu = !openMenu;openLanguage = !openLanguage" class="flag_hover">
+              </a>
+            </li>
+            <li>
+              <a ng-click="toggleLanguage('fr')">
+                <img src="images/toolbar/french.png" ng-hide="french_hover" ng-mouseover="french_hover ='true'" class="flag">
+                <img src="images/toolbar/french_hover.png" ng-show="french_hover" ng-mouseleave="french_hover =!french_hover" ng-click="openMenu = !openMenu;openLanguage = !openLanguage" class="flag_hover">
+              </a>
+            </li>
+            <li>
+              <a ng-click="toggleLanguage('es')">
+                <img src="images/toolbar/spanish.png" ng-hide="spanish_hover" ng-mouseover="spanish_hover ='true'" class="flag">
+                <img src="images/toolbar/spanish_hover.png" ng-show="spanish_hover" ng-mouseleave="spanish_hover =!spanish_hover" ng-click="openMenu = !openMenu;openLanguage = !openLanguage" class="flag_hover">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- end/Expanded Menu - Language -->
+    </div>
+  </div>
+  <!-- end/Menu -->
+</md-toolbar>

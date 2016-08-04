@@ -1,0 +1,183 @@
+<!doctype html>
+<html ng-app="wdcApp">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon.ico" />
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/slit_slider.css">
+    <link rel="stylesheet" href="styles/process.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/jobs.css">
+    <link rel="stylesheet" href="styles/pricing.css">
+    <link rel="stylesheet" href="styles/services.css">
+<<<<<<< HEAD
+    <link rel="stylesheet" href="styles/ios.css">
+    <link rel="stylesheet" href="styles/android.css">
+    <link rel="stylesheet" href="styles/hybrid.css">
+    <link rel="stylesheet" href="styles/design.css">
+    <link rel="stylesheet" href="styles/hosting.css">
+    <link rel="stylesheet" href="styles/marketing.css">
+=======
+    <link rel="stylesheet" href="styles/technologies.css">
+    <link rel="stylesheet" href="styles/programmingLanguages.css">
+    <link rel="stylesheet" href="styles/frameworks.css">
+    <link rel="stylesheet" href="styles/databases.css">
+    <link rel="stylesheet" href="styles/promotional.css">
+    <link rel="stylesheet" href="styles/e_commerce.css">
+    <link rel="stylesheet" href="styles/landingpage.css">
+
+
+>>>>>>> b710d1f2a753286a61b1e22eb5cfe0569515764d
+    <!-- endbuild -->
+    <!--modernizr adding in header-->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-32573677-1', 'auto');
+ ga('send', 'pageview');
+   </script>
+
+</head>
+
+<body class="ng-cloak" ng-controller="BodyCtrl">
+    <header class="ng-cloak" ng-include="'views/header.html'"></header>
+    <div class="content ng-cloak">
+        <div ui-view></div>
+    </div>
+    <footer class="ng-cloak" ng-include="'views/footer.html'"></footer>
+    <section class="youtube_video" id="youtube_video">
+        <md-button id='close_me' class="md-icon-button" aria-label="Close">
+            <md-icon md-svg-icon="images/icons/ic_close_white_24px.svg"></md-icon>
+        </md-button>
+    </section>
+    <!--/youtube_video-->
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-click-outside/clickoutside.directive.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="bower_components/angular-slick-carousel/dist/angular-slick.js"></script>
+    <script src="bower_components/angular-svg-round-progressbar/build/roundProgress.min.js"></script>
+    <script src="bower_components/ng-parallax/angular-parallax.min.js"></script>
+    <script src="bower_components/SlitSlider/js/jquery.slitslider.js"></script>
+    <script src="bower_components/matchmedia/matchMedia.js"></script>
+    <script src="bower_components/ngSticky/lib/sticky.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/jquery.easing/js/jquery.easing.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/angular-dragdrop/src/angular-dragdrop.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/angular-update-meta/dist/update-meta.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!--Plugins dependencies starts-->
+    <script src="bower_components/SlitSlider/js/jquery.ba-cond.min.js"></script>
+    <!--Plugins dependencies ends-->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <!-- Body controller -->
+    <script src="scripts/controllers/body.js"></script>
+    <!-- Home Page controller -->
+    <script src="scripts/controllers/main.js"></script>
+    <!-- About Page controller -->
+    <script src="scripts/controllers/about.js"></script>
+    <!-- Process Page controller -->
+    <script src="scripts/controllers/process.js"></script>
+    <!-- Services Page controller -->
+    <script src="scripts/controllers/services.js"></script>
+<<<<<<< HEAD
+    <!--Services/ Ios Page controller-->
+    <script src="scripts/controllers/ios.js"></script>
+    <!--Services/ android Page controller-->
+    <script src="scripts/controllers/android.js"></script>
+    <!--Services/ hybrid Page controller-->
+    <script src="scripts/controllers/hybrid.js"></script>
+    <!--Services/ design Page controller-->
+    <script src="scripts/controllers/design.js"></script>
+     <!--Services/ hosting Page controller-->
+    <script src="scripts/controllers/hosting.js"></script>
+    <!--Services/ digital marketing Page controller-->
+    <script src="scripts/controllers/marketing.js"></script>
+=======
+    <!-- Promotional Page controller -->
+    <script src="scripts/controllers/promotional.js"></script>
+    <!-- E-commerce Page controller -->
+    <script src="scripts/controllers/e_commerce.js"></script>
+    <!-- Landing Page controller -->
+    <script src="scripts/controllers/landingpage.js"></script>
+    <!--Technologies page controller-->
+    <script src="scripts/controllers/technologies.js"></script>
+    <!--Programming languages controller-->
+    <script src="scripts/controllers/programmingLanguages.js"></script>
+    <!--Frameworks controller-->
+    <script src="scripts/controllers/frameworks.js"></script>
+    <!--Database controller-->
+    <script src="scripts/controllers/databases.js"></script>
+>>>>>>> b710d1f2a753286a61b1e22eb5cfe0569515764d
+    <!-- References Page controller -->
+    <script src="scripts/controllers/references.js"></script>
+    <!-- Contact Page controller -->
+    <script src="scripts/controllers/contact.js"></script>
+    <!-- Pricing Page controller -->
+    <script src="scripts/controllers/pricing.js"></script>
+    <!-- Jobs Page controller -->
+    <script src="scripts/controllers/jobs.js"></script>
+    <!-- facewall Pages controller -->
+    <script src="scripts/controllers/facewall.js"></script>
+    <!-- job Application form Pages controller -->
+    <script src="scripts/controllers/jobApp.js"></script>
+    <script src="scripts/controllers/job.js"></script>
+    <!--services starts from here-->
+    <script src="scripts/services/main.js"></script>
+    <script src="scripts/services/fileUpload.js"></script>
+    <!-- Home page directive-->
+    <script src="scripts/directives/main.js"></script>
+    <!-- Process Page directive -->
+    <script src="scripts/directives/process.js"></script>
+    <!-- Contact Page directive -->
+    <script src="scripts/directives/fileModel.js"></script>
+    <!-- Scroll to specific elemnt directive -->
+    <script src="scripts/directives/scrolltop.js"></script>
+    <script src="scripts/directives/scrollonclick.js"></script>
+    <script src="scripts/directives/slidetoright.js"></script>
+    <script src="scripts/directives/slidetoleft.js"></script>
+    <script src="scripts/directives/playvideo.js"></script>
+    <script src="scripts/directives/jobsform.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

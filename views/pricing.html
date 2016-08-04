@@ -1,0 +1,45 @@
+<update-title title="{{'pricing_meta_title' | translate}}"></update-title>
+<update-meta name="description" content="{{'pricing_meta_description' | translate}}"></update-meta>
+
+<div id="pricing">
+    <!-- Banner Image -->
+    <div class="pricing_banner">
+        <div class="banner_content">
+            <img ng-src="images/pricing/{{'banner_img' | translate}}.jpg" class="pricing_image img-responsive center-block" alt="{{'banner_img' | translate}}">
+            <div class="pricing_text">
+                <h4>{{'banner_txt1' | translate}}</h4>
+                <h1>{{'banner_txt2' | translate}}</h1>
+            </div>
+        </div>
+    </div>
+    <!-- Pricing Section -->
+    <div class='pricing_description'>
+        <h1>{{'pricing_heading' | translate}}</h1>
+        <p>{{'pricing_description' | translate}}</p>
+    </div>
+    <div id="pricing_table">
+        <div class="pricingtable_list" layout="row" layout="row" layout-wrap layout-align="center center" ng-init="pricing_lists=[0, 1, 2, 3]">
+            <div class="pricinglist_item" ng-repeat="pricing_list in pricing_lists">
+                <h3>{{ 'pricing_table.'+ pricing_list +'.list_heading' | translate }}<span>{{ 'pricing_table.'+ pricing_list +'.listheading_span' | translate }}&euro;</span></h3>
+                <p class="item_text">{{ 'pricing_table.'+ pricing_list +'.listheading_desription1' | translate }}<span>{{ 'pricing_table.'+ pricing_list +'.listheading_desription2' | translate }}</span> {{ 'pricing_table.'+ pricing_list +'.listheading_desription3' | translate }}</p>
+                <md-list ng-init="pricing_items=[0, 1, 2, 3, 4]">
+                    <md-list-item ng-repeat="pricing_item in pricing_items" ng-if="('pricing_table.'+ pricing_list +'.list.'+ pricing_item +'.add_class' | translate) == 'true'">
+                        <p>{{'pricing_table.'+ pricing_list +'.list.'+ pricing_item +'.text' | translate}}</p>
+                    </md-list-item>
+                </md-list>
+                <div class="option" >
+                    <h4>{{ 'pricing_table.'+ pricing_list +'.heading' | translate }}</h4>
+
+                    <div ng-init="pricing_options=[0, 1, 2]">
+                    <p ng-repeat="pricing_option in pricing_options">
+                        {{'pricing_table.'+ pricing_list +'.list1.' + pricing_option +'.text1' | translate}}
+                    </p>
+                    </div>
+                </div>
+                <div class="button">
+                    <md-button ui-sref="{{ 'pricing_table.'+ pricing_list +'.link' | translate }}({langcode:language})" class="getstarted">{{ 'pricing_table.'+ pricing_list +'.button' | translate }}</md-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

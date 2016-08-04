@@ -1,0 +1,39 @@
+<!--Banner with the Slider -Start- --> 
+<div class="jumbotron">
+    <div class="container-fluid">
+        <div class="row row-header">
+
+            <div class="col-xs-12">
+                <p id="intro">Get a FREE web or mobile app</p>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-sm-offset-3">
+                <button class="btn btn-lg headerBtn">
+                    Website
+                </button>
+            </div>
+            <div class="col-xs-12 col-sm-2">
+                <button class="btn btn-lg headerBtn">
+                    Shop
+                </button>
+            </div> 
+            <div class="col-xs-12 col-sm-2">
+                <button class="btn btn-lg headerBtn">
+                    App
+                </button>
+            </div> 
+            <div class="col-xs-12">               
+                <div class="container slider" ng-controller="SliderCtrl">
+					<ul>		
+						<li class="slide-{{$index}}" ng-repeat="slide in slides" id="test" repeat-directive>
+							<img ng-src="{{slide}}">
+						</li>		
+					</ul>
+				</div>
+            </div>
+            
+
+        </div> 
+    </div>
+</div> 
+<!--Banner with the Slider -End- --> 
+

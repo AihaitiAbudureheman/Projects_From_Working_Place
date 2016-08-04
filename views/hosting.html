@@ -1,0 +1,87 @@
+<update-title title="{{'hosting_meta_title' | translate}}"></update-title>
+<update-meta name="hosting" content="{{'hosting_meta_description' | translate}}"></update-meta>
+
+<div id="hosting_page">
+
+    <!-- Banner Section -->
+    <div class="service-banner">
+        <img ng-src="images/services/{{'Services_bannerimage' | translate}}.jpg" class="img-responsive" alt="{{'Services_imagetext' | translate}}">
+        <h1 class="banner_text">{{'Services_heading1' | translate}}<br><br>{{'Services_heading2' | translate}}</h1>
+    </div>
+    <!--End of Banner Section -->
+
+    <section id="hosting">
+
+        <!-- Title And Sub-Title Sction -->
+        <div layout-align="center center" layout="column" class="title_section">
+            <div class="scroll_down" layout-align="center" layout="row">
+                <md-icon md-svg-icon="images/icons/ic_keyboard_arrow_down_black_48px.svg" id="down" du-smooth-scroll="down" offset="30" duration="800"></md-icon>
+            </div>
+            <h1 layout-align="center" layout="row">{{'Hosting_title' | translate}}</h1>
+            <p>{{'Hosting_description' | translate}}</p>
+        </div>
+        <!-- End of Title And Sub-Title Sction -->
+
+
+        <!-- Icon layout -->
+        <div layout-align="center " layout="row" layout-xs="column" flex="60" flex-xs="80" flex-offset="20" flex-offset-xs="10">
+            <div layout="row" flex>
+                <div flex="100" class="service_icon_wrapper" ng-repeat = "element in [0, 1, 2]">
+                    <img ng-src="images/services/hosting/{{ 'Hosting_categories.'+ element +'.icon_img' | translate }}.png" class="img-responsive service-icon" alt="{{ 'Hosting_categories.'+ element +'.desc' | translate }}" ng-click="smoothScroll(element)">
+                    <br>
+                    <span class="icon-text">{{ 'Hosting_categories.'+ element +'.desc' | translate }}</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Description rows-->
+        <div layout="column" layout-align="center center" class="description_row" ng-repeat = "element in [0, 1, 2]">
+
+            <!--White rows show on even numbers-->
+            <div layout="column" ng-if="element%2==0">
+                <div layout="column" layout-align="center center"> 
+                    <h2 class="description_header"> {{ 'Hosting_categories.'+ element +'.desc' | translate }}</h2>
+                </div>
+                <div layout="row" layout-align="center center" layout-sm ="column" layout-sm = "column" layout-xs="column" layout-margin >
+                    <div flex="10" flex-sm="100" flex-xs="100">
+                        <img ng-src="images/services/hosting/{{'Hosting_categories.' + element +'.text_img' | translate}}.png" class="leave" alt="{{'Hosting_categories.'+ element +'.desc' | translate}}">
+                    </div>
+                    <div flex="0" flex-md="5" flex-sm="0" flex-xs="0"></div>
+                    <div flex="40" flex-sm="90" flex-xs="90">
+                        <p class="description_text">{{'Hosting_categories.'+ element + '.text' | translate}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Grey rows show on odd-->
+            <div layout="column" ng-if="element%2!=0" class="dark_row">
+                <div layout="column" layout-align="center center"> 
+                    <h2 class="description_header"> {{ 'Hosting_categories.'+ element +'.desc' | translate }}</h2>
+                </div>  
+                <div layout="row" layout-align="center center" layout-sm = "column" layout-xs="column" layout-margin>
+                    <div flex="40" flex-sm="90" flex-xs="90" flex-order="1">
+                        <p class="description_text">{{'Hosting_categories.'+ element + '.text' | translate}}</p>
+                    </div>
+                    <div flex="0" flex-md="5" flex-sm="0" flex-xs="0" flex-order="2"></div>
+                    <!--Two divs for the image, the xs shows right below the title, anything else appears to the right as it should-->
+                    <div flex= "10" flex-sm ="100" flex-xs="100" flex-order = "3" hide-sm hide-xs show-gt-sm>
+                        <img ng-src="images/services/hosting/{{'Hosting_categories.' + element +'.text_img' | translate}}.png" class="leave" alt="{{'Hosting_categories.'+ element +'.desc' | translate}}">
+                    </div>
+                    <div flex= "10" flex-sm ="100" flex-xs="100" flex-order = "0" show-sm hide-gt-sm>
+                        <img ng-src="images/services/hosting/{{'Hosting_categories.' + element +'.text_img' | translate}}.png" class="leave" alt="{{'Hosting_categories.'+ element +'.desc' | translate}}">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Let us know about our project -->
+        <a ui-sref="{{'about_project_link'|translate}}">
+            <div flex id="endRow" class="app_row" layout="column" layout-align="center center">
+                <h2 class="app_header" layout-margin> {{'about_project'|translate}} <img ng-src="images/services/{{'about_project_arrow' | translate}}.png" alt="&rarr;"></h2>
+            </div>
+        </a>
+        
+    </section>
+</div>

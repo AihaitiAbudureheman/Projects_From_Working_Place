@@ -1,0 +1,124 @@
+<update-title title="{{'home_meta_title' | translate}}"></update-title>
+<update-meta name="description" content="{{'home_meta_description' | translate}}"></update-meta>
+
+<md-content id="home_wrapper" layout-align="center">
+    <section id="home_slider" class="home_slider demo-1" home-slider>
+        <div id="slider" class="sl-slider-wrapper">
+            <div class="sl-slider">
+                <div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                    <div class="sl-slide-inner">
+                        <h1 class="slide_content">{{'home_slider.slide1_text1'  | translate}}</h1>
+                    </div>
+                </div>
+                <div class="sl-slide bg-2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+                    <div class="sl-slide-inner">
+                        <div class="slide_content">
+                            <h1>{{'home_slider.slide2_text1'  | translate}}</h1>
+                            <p>{{'home_slider.slide2_text2' | translate}}</p>
+                            <button type="button" class="play_reel" ng-click="playReel();">{{'home_slider.slide2_text3' | translate}}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+                    <div class="sl-slide-inner">
+                        <div class="slide_content">
+                            <h1>{{'home_slider.slide3_text1'  | translate}}</h1>
+                            <p>{{'home_slider.slide3_text2' | translate}}</p>
+                            <p class="bold_txt">{{'home_slider.slide3_text3' | translate}}</p>
+                            <p>{{'home_slider.slide3_text4' | translate}}</p>
+                            <p class="bold_txt">{{'home_slider.slide3_text5' | translate}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /sl-slider -->
+            <nav id="nav-dots" class="nav-dots">
+                <span class="nav-dot-current"><h6>{{'home_slider.pager_text1'  | translate}}</h6></span>
+                <span><h6>{{'home_slider.pager_text2'  | translate}}</h6></span>
+                <span><h6>{{'home_slider.pager_text3'  | translate}}</h6></span>
+            </nav>
+        </div>
+        <!-- /slider-wrapper -->
+    </section>
+    <!--/home_slider-->
+    <md-list class="clients_logo" layout="row" layout-wrap layout-align="center center" ng-init="items=[0, 1, 2, 3, 4]">
+        <md-list-item ng-repeat="item in items">
+            <img ng-src="/images/main/{{ 'clients_logo.'+ item +'.img_name' | translate }}_logo.png" alt="{{ 'clients_logo.'+ item +'.img_name' | translate }}">
+        </md-list-item>
+    </md-list>
+    <!--/clients_logo-->
+    <section class="products_services" layout-align="start center">
+        <h1 class="md-display-1">{{'products.headline' | translate}}</h1>
+        <div layout="row" layout-wrap ng-init="items1=[0, 1, 2, 3]">
+            <div class="product_list" flex="50" flex-sm="100" flex-xs="100" ng-repeat="item1 in items1">
+                <h3>{{ 'products.categories.'+ item1 +'.title' | translate }}</h3>
+                <md-list layout="row" layout-wrap layout-align="center center" ng-init="items2=[0, 1, 2]">
+                    <md-list-item ng-repeat="item2 in items2">
+                        <figure layout-fill>
+                            <img ng-src="/images/main/{{ 'products.categories.'+ item1 +'.list.'+ item2 +'.img_name' | translate }}.png" alt="Web">
+                            <figcaption layout-fill>
+                                <h4>{{ 'products.categories.'+ item1 +'.list.'+ item2 +'.heading' | translate }}</h4>
+                                <p>{{ 'products.categories.'+ item1 +'.list.'+ item2 +'.description' | translate }}</p>
+                            </figcaption>
+                        </figure>
+                    </md-list-item>
+                </md-list>
+            </div>
+        </div>
+    </section>
+    <!--/products_services-->
+    <md-list class="about_us" layout="row" layout-wrap layout-align="center" ng-init="items3=[0, 1, 2]">
+        <md-list-item flex="33" flex-sm="100" flex-xs="100" layout-fill ng-repeat="item3 in items3">
+            <figure>
+                <img ng-src="/images/main/{{ 'home_about_us.'+ item3 +'.img_name' | translate }}_icon.png" alt="{{ 'home_about_us.'+ item3+'.img_name' | translate }}_icon">
+                <figcaption>
+                    <h3>{{ 'home_about_us.'+ item3 +'.heading' | translate }}</h3>
+                    <p>{{ 'home_about_us.'+ item3 +'.description' | translate }}</p>
+                </figcaption>
+            </figure>
+        </md-list-item>
+    </md-list>
+    <!--/about_us-->
+    <section class="parallax_banner">
+        <div class="parallax_txt" layout="row" layout-align="center" du-parallax y="txt_parallax">
+            <img ng-src="/images/main/quotation_left.png" alt="Quotation">
+            <h1>{{'parallax_banner.parallax_txt' | translate}}</h1>
+            <img ng-src="/images/main/quotation_right.png" alt="Quotation">
+        </div>
+        <img class="parallax_img" ng-src="/images/main/parallax_banner1.jpg" alt="Parallax banner">
+    </section>
+    <!--/parallax_banner-->
+    <section class="testimonials">
+        <h1>{{'testimonials.headline' | translate}}</h1>
+        <md-list layout="row" layout-wrap layout-align="center center">
+            <md-list-item ng-repeat="item4 in testimonialsObj" ng-if="item4.isVisible==true">
+                <a ng-disabled="true" href="{{ item4.img_link | translate }}" target="_blank">
+                    <div class="zoom_frame" home-testimonials>
+                        <div class="zoom_me">
+                            <img ng-src="http://wd-agency.com:5062/img/testimonials/{{ item4.img_name| translate }}" alt="{{item4.project_name}}">
+                        </div>
+                        <div class="white_box">
+                            <div class="text_in_box">
+                                <h4 class="md-headline">{{ item4.project_name | translate }}</h4>
+                                <p class="md-body-1">{{ item4.project_type | translate }}</p>
+                            </div>
+                            <img ng-src="/images/main/latch.png" alt="Latch">
+                        </div>
+                        <div class="quote_main">
+                            <p>{{item4.client_quote | translate }}</p>
+                            <h5>{{item4.client_name| translate }}</h5>
+                        </div>
+                    </div>
+                    <!--/zoom_frame-->
+                </a>
+            </md-list-item>
+        </md-list>
+    </section>
+    <!--/testimonials-->
+    <section class="home_location">
+        <img ng-src="/images/main/map_home.jpg" alt="{{'home_location.alt_text' | translate}}">
+        <h3>{{'home_location.map_text' | translate}}</h3>
+    </section>
+    <!--/home_location-->
+</md-content>
+<!--/home_wrapper-->

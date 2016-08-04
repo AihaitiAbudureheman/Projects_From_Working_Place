@@ -1,0 +1,192 @@
+@media only screen and (max-width: 1280px) {
+
+	.jumbotron{
+
+		padding-top: 0px;	
+		height: 400px;
+
+	}
+	.progress{	
+		width:73%;
+		left: 145px;	
+	}	
+	.packageHead #comingSoon{		
+		left: 56.2%;		
+	}
+
+}
+@media only screen and (max-width: 1024px) {	
+
+	.progressbar img {
+
+		transform:scale(0.75);
+
+	}	
+
+	#active, #inactive, #enjoy{
+
+		padding: 8px 8px 8px 8px;
+
+	}
+
+	.progress{			
+		top: 30px;
+		left: 110px;
+	}
+
+	.packageHead #comingSoon{		
+		left: 50.2%;	
+	}
+	
+}
+
+@media only screen and (max-width: 991px) {
+
+	.packageView1, .packageView2, .packageView3{
+		display: none;
+	}
+	.slider{
+		display:none;
+	}
+
+	.jumbotron{
+		height: auto;
+	}
+
+	.jumbotron #intro{
+		margin-top: 0px;
+	}		
+	.finalTheme{
+		width: 90%;
+		margin-top: 50px;
+	}
+	.demoHover{		
+		height:300px;
+	}
+	.breadcrumb{
+		padding: 5px 5px 5px 5px;
+		float:none;
+	}
+	.packageOverView .col-xs-9, .packageOverView .col-xs-1{	
+		float:none;
+	}
+	.packageHead #comingSoon{		
+		left: 59%;		
+	}
+}
+
+@media only screen and (max-width: 768px) {
+		
+	.progressbar img {
+
+		transform:scale(0.5);
+
+	}	
+
+	#active, #inactive, #enjoy{
+
+		padding: 4px 4px 4px 4px;
+
+	}	
+	.progress{					
+		top: 25px;
+		left: 69px;
+	}	
+	
+	.jumbotron #intro{
+
+		font-size: 28px;
+		padding-top: 15px;
+
+	}	
+
+	.buttonViewTheme, .buttonChangePackage{
+
+		padding: 10px 25px;
+		font-size: 12px;
+
+	}
+	
+	.buttonCheckout{
+		margin-top: 50px;
+	}
+	.demoHover{		
+		height:200px;
+	}
+	.themes{
+		padding: 0px 5px 0px 5px;
+	}
+	.breadcrumb{
+		font-size: 14px;
+	}
+	.packageHead #comingSoon{		
+		left: 7.5%;		
+	}
+	.addOn h3{
+	float: left; 	
+	}
+	
+}
+
+@media only screen and (max-width: 544px) {
+	
+	.firstCatagoryButton .buttonChangePackage{
+		border: 2px solid #549db9;
+		margin: 5px 10px 20px 20px;
+		width:	200px;	
+		font-size: 14px;
+	}
+	.progressbar p{
+		font-size: 11px;
+	}
+	.progress{	
+		width:72%;	
+		height: 2px;		
+		top: 25px;
+		left: 40px;
+	}	
+
+	.chosenPackage #price{
+		color: #58b6a2;
+		padding: 40px 24px 40px 24px;
+		background-color: #F8F8F8;
+		border: 5px solid #58b6a2 ;
+		border-radius: 100%;
+		font-size: 38px;
+		margin-top: 30px;	
+	}
+
+	.buttonViewTheme{
+		padding: 10px 25px;
+		font-size: 12px;
+	}
+
+	.demoHover{		
+		height:150px;	
+	}
+	.themes .oneTheme h2{
+		font-size: 18px;
+	}
+	.themes .oneTheme h4{	
+		font-size: 14px;
+	}
+	.themeButton{
+		padding:0px 0px 0px 0px;
+	}
+	.breadcrumb li{
+		padding-left: 0px;
+	}
+	.pagination li a{
+		font-size: 12px;
+	}
+	.packageOverView{
+		margin: 0px;
+	}
+	.packageOverView .col-xs-1{
+		padding-left: 0px;
+	}
+	.packageHead #comingSoon{		
+		left: 10%;		
+	}
+
+}

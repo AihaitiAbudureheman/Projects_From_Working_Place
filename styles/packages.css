@@ -1,0 +1,344 @@
+/*# CSS mostly for the package container and the package.html site / contains also the progressbar#*/
+/*#*/
+/*#*/
+/*# General stuff for the hole Package Container of the package.html site#*/
+.packages{
+
+	text-align: center;
+	font-family: 'GeosansLight';	
+	overflow:hidden;	
+	width:100%;
+}
+
+.packages_container{
+	max-width: 1400px !important;
+}	
+
+.packages ul li{
+	float: none;	
+}
+
+.packageHead{
+	
+	text-align: center;
+	background-color: #58b6a2;
+	color: #f6f6f6;
+	padding: 5px 5px 5px 5px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	position: relative;	
+}
+.packageHeadNew{
+	
+	text-align: center;	
+	color: #484743;
+	padding: 5px 5px 5px 5px;	
+	border: 1px solid #484743;
+	border-bottom: none;
+	position: relative;	
+}
+.packageHeadNew h3{	
+	margin: 30px 0px 15px 0px;
+}
+.packageHeadNew p{
+	font-size: 16px;
+	padding: 0px 10px 0px 10px;	
+}
+.packageBodyNew{	
+	background-color: #f6f6f6;
+	border: 1px solid #484743;
+	border-top: none;
+	min-height: 325px;
+	text-align: center;	
+	padding: 50px 5px 0px 5px;
+}
+.packageBodyNew p{
+	display: inline-block;
+	font-size: 20px;
+}
+.packageBodyNew ul{
+	display: inline-block;
+	list-style: none;
+	text-align: left;	
+}
+.packageBodyNew span{
+
+	font-size: 18px;
+	padding: 5px 5px 5px 5px;
+}
+.buttonViewThemeNew {    
+	background-color: white;
+    border: 1px solid #484743;    
+    color: #484743;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px 0 30px 0;   
+}
+
+.packageHeadNew #comingSoon{
+	position:absolute;	
+	margin-left: 5px;
+	top: -5px;
+	right: -5px;
+}
+
+
+.packageHead h4{
+	margin: 20px 0px 5px 0px;
+}
+.packageHead h2{
+	margin: -5px 0px 5px 0px;
+}
+.packageHead a{
+	color: white;
+}
+.packageHead #questionIcon{	
+	position: absolute;
+	font-size: 24px;	
+	top: 80px;
+	right: 20px;
+	cursor: pointer;
+	z-index: 50;
+}
+
+ .tooltip-inner {
+  position: absolute;
+  background-color: #f6f6f6;
+  color: #484743;
+  border: 1px solid #58b6a2;  
+  top: 115px;
+  width: 175px;
+  left: -50px;  
+  
+}
+
+.packageHead .tooltip.bottom .tooltip-arrow { 
+  position: absolute;
+  border-bottom-color: #58b6a2; 
+  left: 40px;
+  top: 110px;
+  
+}
+.packageHead #comingSoon{
+	position:relative;
+	bottom: 9px;
+	left: 62.5%;
+	float:right;	
+}
+.packageBody{
+	position: relative;	
+}
+.packageBody ul{
+	list-style: none;
+}
+.packageBody ul li{
+	float: none;
+	display: inline-block;	
+	width: 100%;
+
+}
+.packageBody span{
+
+	font-size: 18px;
+	padding: 5px 5px 5px 5px;
+}
+
+#left{
+	float: left;	
+}
+#right{
+	float: right;	
+}
+.packageBody .freePackage{
+	color: #58b6a2;
+}
+
+.customDropdown{
+	border: none;
+	background-color: white;
+}
+.customDropdown:hover{
+	background-color: white;
+}
+.dropdown-toggle:active, .open .dropdown-toggle {background:#FFF !important}
+/*# progressbar #*/
+.progressbar {
+	z-index: 5;
+}
+.progressbar p{
+	margin-top: 10px;
+	font-family: 'colaboratelightregular';
+	font-weight: bold;
+}
+.progressbar div{	
+	display: inline-block;			
+}
+
+/*#The icon is active -> blue background #*/
+#active{
+	padding:12px 12px 12px 12px;	
+	background-color: #549db9;
+	border-radius: 50%;
+	border: 4px solid #549db9;
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.35);	
+	margin: 0;	
+	
+}
+
+/*#The icon is inactive -> white background blue border radius#*/
+#inactive, #enjoy{
+	padding:12px 12px 12px 12px;	
+	background-color: #fff;
+	border: 4px solid #549db9;
+	border-radius: 50%;		
+	margin: 0;	
+	
+}
+/*# Progressbar --> Line between the different Icons#*/
+.progress{
+	width: 73.5%;
+	height: 2px;
+	position:absolute;
+	top: 30px;
+	left: 120px;
+}
+/*# Color of the progressbar - line#*/
+.progress-bar-custom{
+	background: #549db9;
+}
+
+
+/*#Css for the button, which can change the theme (inside of a specific package container)#*/
+.buttonViewTheme {
+    background-color: #58b6a2; 
+    border: 2px solid #f6f6f6;
+    border-radius: 15px;
+    color: #F8F8F8;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px 0 10px 0;   
+}
+
+/*#Css for the button, which can change the package#*/
+.buttonChangePackage{
+
+	background-color: #f6f6f6; 
+    border: 1px solid #484743;
+    color: #484743 ;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 30px 0 10px 0;
+}
+
+/*#Css for the Checkout button#*/
+.buttonCheckout{
+	border-radius: 0;
+	font-size: 24px;
+	padding: 20px 40px;
+	margin: 150px 0 50px 0;
+	background-color: #549db9;
+}
+
+/*#PackageOverView#*/
+
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;    
+}
+
+/*# Style for Icons left and right from the packages #*/ 
+.arrow{
+
+	font-size: 30px;
+	color: #549db9;
+	opacity: 0.5;
+	cursor:pointer;
+	display:none;
+}
+.arrow2{
+	font-size: 30px;
+	color: #549db9;
+	opacity: 0.5;
+	cursor:pointer;		
+}
+.opacityOfArrow{
+	opacity: 0;
+}
+
+.packageOverView {
+	margin: 0px 20px 0px 20px;
+}
+
+.packageFAQ {
+	margin-top: 40px;
+	padding: 0 60px;
+}
+
+/*# AddOn #*/
+#addOnDescription {
+	padding: 0;
+	margin: 0;
+	margin-left: 40px;
+}
+
+.addOn {
+	text-align: left;
+	padding: 10px;
+}
+
+.addOn label {
+	width: 100%;
+}
+
+.addOnCheckbox {
+	margin-top: 38px;
+}
+
+.summaryHead {
+	padding: 0;
+	margin: 0;
+	background-color: #f6f6f6;
+	border: 1px solid #484743;
+	border-bottom: none;
+	text-align: left;
+}
+
+.summaryBody {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	border: 1px solid #484743;
+	border-top: none;
+	text-align: left;
+}
+
+#price {
+	text-align: right;
+}
+
+.total {
+	text-align: right;
+	padding-top: 130px;
+	padding-right: 20px;
+}
+
+@media screen and (max-width: 1280px){
+	.packages{
+	}
+}
+
+@media screen and (max-width: 991px) {
+    .summaryHead {
+        margin-top: 40px;
+    }
+}

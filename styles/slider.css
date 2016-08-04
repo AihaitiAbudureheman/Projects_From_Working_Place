@@ -1,0 +1,186 @@
+/******BANNER********/
+.jumbotron{
+
+	background: url('../images/main/banner_img.jpg');
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+	text-align: center;
+	color: #F8F8F8;
+	margin: 0 auto;	
+	overflow:hidden;
+	position:relative;
+	padding-bottom: 0px; 
+	height:445px;
+	font-family: 'GeosansLight';
+	border-radius: 0px !important;	
+
+}
+
+.jumbotron p{
+	
+	text-align: center;	
+	color: #E0E0E0;
+    font-size: 24px;
+}
+
+.jumbotron #intro{
+	
+    font-size: 38px;
+    margin-bottom: 0;
+    margin-top: 50px;
+    padding: 5px 5px 5px 5px;
+}
+
+
+
+/*#*****SLIDER*******#*/
+
+.slider{
+	
+	position: relative;	
+	width: 100%;
+	padding: 0;
+	padding-top: 20px;
+}
+
+.slider ul{	
+    
+    position: relative;
+    left: 0;
+    text-align: center;
+    margin:0 ;
+    overflow: hidden;      
+}
+
+.slider ul li{
+	
+	float: none;
+	display: inline-block;
+	overflow:hidden;
+}
+.slider ul li img{
+
+	vertical-align: bottom;
+	opacity: 1;
+	}
+
+/*#Change size of the different images for the slider - not very dynamic - will try it later#*/
+
+/*#First and pre-last Image (1 and 5)#*/
+.slide-0 img , .slide-4 img{
+
+	width: 200px;
+	height:150px;
+
+}
+/*#Second and fourth Image (2 and 4)#*/
+.slide-1 img, .slide-3 img{
+
+	width: 280px;
+	height:200px;
+}
+
+/*#The "Eyecatcher" - the biggest and third (middle image)S#*/
+.slide-2 img{
+
+	width: 360px;
+	height:250px;
+}
+
+/*#The last image - will be shown after the first image starts to get smaller#*/
+.slide-5 img{
+
+	width: 0px;
+	height:0px;
+
+}
+
+/*#The different images will become a own animation#*/
+
+.slide-0 img{
+	
+	animation: firstIMG 3s linear 0s;
+	-webkit-filter: grayscale(25%) opacity(90%) contrast(60%);
+    filter: grayscale(25%) opacity(90%) contrast(60%);
+}
+
+.slide-1 img{	
+
+	animation: secondIMG 3s linear 0s;
+	-webkit-filter: grayscale(25%) opacity(90%) contrast(60%);
+    filter: grayscale(25%) opacity(90%) contrast(60%);
+
+}
+
+.slide-2 img{
+	
+	animation: thirdIMG 3s linear 0s;
+	-webkit-filter: grayscale(25%) opacity(90%) contrast(60%);
+    filter: grayscale(25%) opacity(90%) contrast(60%);	
+}
+
+.slide-3 img{
+	
+	animation: fourthIMG 3s linear 0s;
+	z-index: 0;
+	-webkit-filter: grayscale(25%) opacity(90%) contrast(60%);
+    filter: grayscale(25%) opacity(90%) contrast(60%);
+}
+
+.slide-4 img{
+	
+	animation: fifthIMG 3s linear 0s;
+	z-index: 0;
+	-webkit-filter: grayscale(25%) opacity(90%) contrast(60%);
+    filter: grayscale(25%) opacity(90%) contrast(60%);
+}
+.slide-5 img{
+	
+	animation: lastIMG 3s linear 0s;
+	z-index: 0;
+	-webkit-filter: grayscale(25%) opacity(90%) contrast(60%);
+    filter: grayscale(25%) opacity(90%) contrast(60%);
+}
+
+
+/*#At the start and at the end of each animation you will have a little pause, between these, the size of the images will change#*/
+@keyframes firstIMG{
+
+	0%{width:200px; height:150px; margin-right: -100px;}
+	40%,100%{width: 0px; height: 0px; margin-right: 0px;}
+
+}
+
+@keyframes secondIMG{
+
+	0%{width:280px; height:200px; margin-right: -120px;}
+	40%,100%{width: 200px; height:150px; margin-right: -100px;}
+
+}
+
+@keyframes thirdIMG{
+
+	0%{width:360px; height:250px; margin-right: 0px;}
+	40%,100%{width: 280px; height:200px; margin-right: -120px;}
+
+}
+
+@keyframes fourthIMG{
+
+	
+	0%{width: 280px; height:200px;margin-left: -120px; }
+	40%,100%{width:360px; height:250px;margin-left: 0px;}
+
+}
+@keyframes fifthIMG{
+	
+	0%{width: 200px; height:150px; margin-left: -100px; }
+	40%,100%{width:280px; height:200px; margin-left: -120px;  }
+
+}
+@keyframes lastIMG{	
+	
+	0%{width:0px; height:0px;margin-left: 0px;}
+	40%,100%{width: 200px; height:150px;margin-left: -100px;}
+
+}

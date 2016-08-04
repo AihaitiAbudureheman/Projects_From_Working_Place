@@ -1,0 +1,367 @@
+/*# Most of this styles are for the theme.html site #*/
+
+
+/*# Style for all themes #*/ 
+.shopHeader{
+	z-index: 1;
+}
+
+.themesWrapper{
+	margin:0 auto;
+    overflow:auto;  
+}
+
+.themes{
+	padding-right: 100px;
+	padding-left: 100px;
+}
+.smoothAdd {
+    opacity: 1;
+    margin-top: 0;
+}
+.smoothAdd.ng-enter-prepare{
+	opacity: 0;
+    margin-top:20%;
+}
+.smoothAdd.ng-enter {
+    -webkit-transition: 2s;
+    transition: 2s;
+    opacity: 0;
+    margin-top:20%;
+}
+.smoothAdd.ng-enter-active {
+    opacity: 1;
+    margin-top:0;
+}
+.glyphicon-sort{
+	font-size: 14px;
+	padding-left: 5px;
+}
+.themes .oneTheme{
+	margin: 5px 5px 5px 5px;
+	width: 100%;	
+	text-align: left;
+}
+.themes .oneTheme h4{
+	margin-top: 0px;		
+}
+
+.themes .oneTheme img{
+	width: 100%;	
+}
+
+.themeTitle{
+	white-space: nowrap;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    -moz-transition: 1s;
+	-webkit-transition: 1s;
+    transition: 1s;
+}
+.overflowHover{
+	overflow: visible;
+	position: absolute;
+	box-shadow: -2px 4px 6px #CCCCCC;
+	-webkit-box-shadow: -2px 4px 6px #CCCCCC;
+	-moz-box-shadow: -2px 4px 6px #CCCCCC;
+	z-index: 1;
+	background-color:rgba(255, 255, 255, 1);
+	padding-left:2px;
+	padding-right:2px;
+	-moz-transition: 0.2s;
+	-webkit-transition: 0.2s;
+    transition:  0.2s;
+}
+.headerHolder{
+	color:transparent!important;
+	background-color: transparent!important;
+}
+
+.oneTheme{
+	border-style: solid;
+    border-width: 20px 0px 0px;
+    -moz-border-image: url(../images/main/appleborder.png) 17 2 0 2 stretch repeat;
+    -webkit-border-image: url(../images/main/appleborder.png) 17 2 0 2 stretch repeat;
+    -o-border-image: url(../images/main/appleborder.png) 17 2 0 2 stretch repeat;
+    border-image: url(../images/main/appleborder.png) 17 2 0 2 fill stretch repeat;
+
+}
+
+/*loading animation*/
+#loadingSpace{
+	display:    none;
+    position:   fixed;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('/images/icons/ellipsis.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+body.stop-scrolling #loadingSpace{
+	display:block;
+}
+/*Stop scrolling class for when loading animation appears*/
+.stop-scrolling{
+	height:100%;
+	overflow:hidden;
+}
+
+/*# Theme at the finalProduct.html site #*/
+.finalTheme{	
+	width:70%;
+}
+
+.themes .oneTheme .buttonSelectDemo, .buttonAddRemove{
+	background: none;
+	border: 1px solid #484743;     
+    color: #484743;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 30px 10px;
+
+    transition-timing-function: ease;
+	transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+	-webkit-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+	-moz-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.themeButton button.buttonSelectDemo:hover {
+	background: #549db9;
+	color:#ffffff;
+	border: 1px solid #549db9;
+	box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.2);
+	transition-timing-function: ease;
+	transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+	-webkit-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+	-moz-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.changeButtonRemove{
+	background-color: white;
+	border: 2px solid #549db9; 
+	color: #549db9;
+}
+
+.sortContainer{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.breadcrumb{
+
+	background-color: white;
+	padding-left: 0px;
+	margin-bottom: 0px !important;
+	font-size: 20px;
+	font-family: 'colaboratelightregular';
+	text-align: center;
+}
+
+.breadcrumb li {
+	padding: 0px 0px 0px 10px;		
+}
+.breadcrumb .active{	
+	font-weight: bold;
+}
+
+.breadcrumb li span:after, .breadcrumb li span:focus, .breadcrumb li span:active{
+	outline: none;
+}
+
+
+.pagination li{	
+	padding: 0px 3px 0px 3px;
+}
+.pagination .disabled .number{
+	background-color: #549db9;
+	color: white;
+}
+.pagination li a{
+	background-color:#EDEDED;
+	border: none;
+	color: black;
+	cursor: pointer;
+	margin: 1px;
+}
+.pagination .prevNex{
+	border: none;
+	color: #549db9;
+	background-color: white;
+	cursor: pointer;
+}
+.pagination .prevNex:hover{
+	border: none;
+	color: #549db9;
+	background-color: white;
+}
+
+.contactUs{	
+	font-family: 'GeosansLight';	
+	text-align: center; 
+	background-color: #549db9;
+	color: white;
+	width: 100%;
+	padding: 5px 5px 5px 5px;
+	margin-top: 50px;	
+}
+
+.contactUs a{
+	text-decoration: none;
+	color: white;
+}
+
+.demoHover{	
+	overflow: hidden;
+	height: 500px;
+	border: 2px solid #cccccc;	
+}
+
+.demoHover img{
+	position: absolute;
+	height: auto;	
+	top: 0px;	
+	transition: all 2s linear;
+	right: 0px;
+}
+
+.demoHover img:hover{
+	top: -200px;
+}
+
+.themeTypeWrapper{
+	margin-top:20px;
+}
+
+#sliderContainer{
+	top:40px;
+}
+
+/*For themeModal*/
+
+#demoBox{
+	display: inline-block;
+	border: 2px solid lightgray;
+	margin: 0 auto;
+
+	transition-timing-function: linear;
+
+	transition: width .5s, height .5s;
+	-webkit-transition: width .5s, height .5s;
+    -moz-transition: width .5s, height .5s;
+    -o-transition: width .5s, height .5s;
+}
+
+.modalBar{
+	background: #549db9;
+	width: 100% !important;
+}
+
+.modalStyles{
+	padding: 0 0 0 0 !important;
+	overflow: hidden !important;
+}
+
+.demoName{
+	font-weight: 500 !important;
+	letter-spacing: 1px !important;
+	line-height: 30px;
+	font-size: 25px !important;
+	overflow: hidden;
+}
+
+#demoToolbar{
+	margin-left: 0;
+}
+#demoTabs{
+	margin-left:0;
+}
+
+.mdModal{
+	z-index:20000;
+}
+
+
+/*end*/
+
+/*#*****BUTTONS*******#*/
+
+.headerBtn{
+	width: 120px !important;
+	text-align: center;
+	margin: 5px 0 5px 0;
+	border-radius: 0px;
+	font-family: 'colaboratelightregular';
+	background: none;
+	border: 1px solid #484743;     
+    color: #484743;
+}
+
+.headerBtn:hover{
+	background: #F0F0F0;
+}
+
+.selectedCategory{
+	background:#549db9;
+	width: 120px !important;
+	text-align: center;
+	margin: 5px 0 5px 0;
+	border-radius: 0px;
+	font-family: 'colaboratelightregular';
+	border: 1px solid #549db9;     
+    color: #ffffff;
+}
+.selectedCategory:hover{
+	color:#ffffff;
+}
+.selectedCategory:focus{
+	color:#ffffff; 
+}
+/*end*/
+
+
+.imgChangeSmall img{
+	transition: all 2s linear;
+}
+.imgChangeMedium img{
+	transition: all 4s linear;
+}
+.imgChangeLarge img{
+	transition: all 7s linear;
+}
+.imgChangeSmall img:hover{
+	top: -250px;
+}
+.imgChangeMedium img:hover{
+	top: -600px;
+}
+.imgChangeLarge img:hover{
+	top: -1100px;
+}
+
+.md-button {
+	margin-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #484743;
+	border-radius: 0;
+	font-size:16px; 
+	padding: 5px 40px;
+}
+
+.md-dialog-container {
+	height: 100vh !important;
+	position: fixed !important;
+}
+
+.md-dialog-is-showing {
+    max-height: 100%;
+    overflow: hidden;
+}
+
+

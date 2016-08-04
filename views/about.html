@@ -1,0 +1,88 @@
+<update-title title="{{'about_meta_title' | translate}}"></update-title>
+<update-meta name="description" content="{{'about_meta_description' | translate}}"></update-meta>
+
+<md-content id="about_wrapper" layout-align="start center">
+    <div layout="column" layout-xs="column" layout-sm="column" layout-md="column" id="facewall">
+        <h1 layout="column" layout-align="center center" class="md-display-1" class="facewall_text">{{'facewall_text' | translate}}</h1>
+        <a ui-sref="facewall({langcode:language})" layout="column" layout-align="center center" id="facewall_btn">
+            <span>{{'facewall_btn' | translate}}</span>
+        </a>
+    </div>
+    <section id="about_wd" layout-align="start center">
+        <h1 class="md-display-1">{{'about_head' | translate}}</h1>
+        <div ng-init="about_items=[0, 1]">
+        <p class="about_content"  ng-repeat="ab_item in about_items">
+            {{ 'about_us.'+ ab_item +'.content' | translate }}</p>
+        </div>
+        <md-list class="about_us_list" layout="row" layout-wrap ng-init="figure=[0, 1]">
+            <md-list-item layout-align="center" ng-repeat="figures in figure" flex="50" flex-sm="100" flex-xs="100">
+                <figure>
+                    <img ng-src="/images/about/{{'figure.'+ figures +'.img' | translate}}.png" alt="{{'figure.'+ figures +'.img' | translate}}">
+                    <figcaption>
+                        <p class="about_content">{{ 'figure.'+ figures +'.caption' | translate }}</p>
+                    </figcaption>
+                </figure>
+                <figure class="border_img">
+                    <img ng-src="/images/about/divider.png" alt="divider">
+                </figure>
+            </md-list-item>
+        </md-list>
+        <p class="about_content">{{'about_bottom' | translate}}</p>
+    </section>
+    <section id="slider">
+        <div class="slider_wrapper">
+            <slick settings="slickConfig" ng-init="slider=[0, 1, 2, 3]">
+                <div class="each_slider" ng-repeat="slide in slider">
+                    <h1>{{ 'slider.'+ slide +'.slider_head' | translate }}</h1>
+                    <p class="AboutSliderLowerText">{{ 'slider.'+ slide +'.slider_text' | translate }}</p>
+                    <div class="image wd_manage">
+                        <md-list layout="row" layout-wrap layout-align="center" ng-init="items=[0, 1, 2, 3]">
+                            <md-list-item class="person" flex="20" flex-sm="25" flex-xs="100" layout-fill ng-repeat="item in items" ng-mouseenter="hover_info = true" ng-mouseleave="hover_info = false" ng-if="('slider.'+ slide +'.slider_img.' + item +'.add_class' | translate) == 'true'">
+                                <img class="person_img" ng-src="images/about/{{'slider.'+ slide +'.slider_img.'+ item +'.img' | translate}}.png" alt="{{slide_img.img1}}" />
+                                <div class="person_info" ng-class="{info_hover: hover_info}">
+                                    <h3>{{'slider.'+ slide +'.slider_img.'+ item +'.img_head' | translate}}</h3>
+                                    <h5>{{'slider.'+ slide +'.slider_img.'+ item +'.img_subhead' | translate}}</h5>
+                                    <div class="carousel_social">
+                                        <a target="_blank" href="{{'slider.'+ slide +'.slider_img.'+ item +'.gplus_url' | translate}}"><img ng-src="images/about/{{'slider.'+ slide +'.slider_img.'+ item +'.slider_gplus_img' | translate}}.png" alt="{'slider.'+ slide +'.slider_img.'+ item +'.slider_gplus_img' | translate}}" /></a>
+                                        <a target="_blank" href="{{'slider.'+ slide +'.slider_img.'+ item +'.in_url' | translate}}"><img ng-src="images/about/{{'slider.'+ slide +'.slider_img.'+ item +'.slider_in_img' | translate}}.png" alt="{{'slider.'+ slide +'.slider_img.'+ item +'.slider_in_img' | translate}}" /></a>
+                                    </div>
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                    </div>
+                </div>
+            </slick>
+        </div>
+    </section>
+    <section id="advisors" layout-align="start center">
+        <h1 class="md-display-1">{{'advisors_head' | translate}}</h1>
+        <md-list class="advisors_list" layout="row" layout-align="center" layout-wrap ng-init="advis_items=[0, 1, 2, 3]">
+            <md-list-item ng-repeat="ad_item in advis_items" flex="25" flex-sm="50" flex-xs="100" layout-fill>
+                <figure class="advisors_img" ng-mouseenter="hovering = true" ng-mouseleave="hovering = false">
+                    <img ng-class="{img_hvr: hovering}" ng-src="/images/about/{{ 'adviors.'+ ad_item +'.img' | translate }}.jpg" alt="{{ 'adviors.'+ item +'.img' | translate }}">
+                    <figcaption>
+                        <p ng-class="{blk: hovering}">{{ 'adviors.'+ ad_item +'.caption' | translate }}</p>
+                    </figcaption>
+                    <h5>{{ 'adviors.'+ ad_item +'.name' | translate }}</h5>
+                </figure>
+            </md-list-item>
+        </md-list>
+    </section>
+    <section id="wd_in_number">
+
+        <h1 class="md-display-1">{{'wd_number_head' | translate}}</h1>
+        <div class="wd_in_number_inner" ng-init="items=[0, 1, 2]">
+            <md-list class="progress_row" layout="row" layout-align="center" ng-repeat="item_bar in items" layout="row" layout-align="center" layout-wrap ng-init="prog_items=[0, 1, 2, 3, 4]">
+                <md-list-item flex="20" flex-sm="33" flex-xs="100" ng-repeat="item in prog_items" ng-show="{{'progress_row.'+ item_bar +'.pro_bar.'+ item +'.add_prog' | translate}}">
+                    <div class="progress-wrapper hide_progress" >
+                        <div class="progress" ng-style="getStyle()">{{'progress_row.'+ item_bar +'.pro_bar.'+ item +'.current' | translate}}</div>
+                        <div round-progress max="'progress_row.'+ item_bar +'.pro_bar.'+ item +'.max' | translate" current="'progress_row.'+ item_bar +'.pro_bar.'+ item +'.current' | translate" color="{{ getColor() }}" bgcolor="{{ bgColor }}" radius="{{ radius }}" semi="isSemi" rounded="rounded" stroke="{{ stroke }}" clockwise="clockwise" responsive="responsive" duration="{{ duration }}" animation="{{ currentAnimation }}" offset="{{ offset }}" animation-delay="{{ animationDelay }}" on-render="showPreciseCurrentss">
+
+                        </div>
+                        <p class="wd_number">{{'progress_row.'+ item_bar +'.pro_bar.'+ item +'.name' | translate}}</p>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </div>
+    </section>
+</md-content>

@@ -1,0 +1,436 @@
+<update-title title="{{'contact_meta_title' | translate}}"></update-title>
+<update-meta name="description" content="{{'contact_meta_description' | translate}}"></update-meta>
+<div class="location">
+  <div class="map_main">
+  <img src="images/contact/map_slide2.png" alt="map" class="map">
+    <div class="pins_container">
+      <div class="pins_position">
+        <img src="images/contact/map_pin.png" ng-hide="hover_paris" alt="pin" class="pin_slide1 pin" style="top:25%;left:21.5%;">
+        <img src="images/contact/map_pin_hover.png" ng-show="hover_paris" alt="pin" class="pin_slide1 pin_hover" style="top:20.5%;left:20.8%;">
+        <span class="pin_slide1 pin_name animate_left" style="top: 31%;left: 16%;">Paris</span>
+        <img src="images/contact/map_pin.png" ng-hide="hover_copenhagen" alt="pin" class="pin_slide1 pin" style="top:13.1%;left:23.2%;">
+        <img src="images/contact/map_pin_hover.png" ng-show="hover_copenhagen" alt="pin" class="pin_slide1 pin_hover" style="top:9%;left:22.5%;">
+        <span class="pin_slide1 pin_name animate_left" style="top: 10%;left: 14%;">Copenhagen</span>
+        <img src="images/contact/map_pin.png" ng-hide="hover_coimbatore" alt="pin" class="pin_slide1 pin" style="bottom: 19.5%;left: 44.2%;">
+        <img src="images/contact/map_pin_hover.png" ng-show="hover_coimbatore" alt="pin" class="pin_slide1 pin_hover" style="bottom:15.5%;left:43.7%;">
+        <span class="pin_slide1 pin_name animate_left" style="bottom: 16%;left: 38.5%;">Coimbatore</span>
+        <img src="images/contact/map_pin.png" ng-hide="hover_mysore" alt="pin" class="pin_slide1 pin" style="bottom: 15.5%;left: 44.2%;">
+        <img src="images/contact/map_pin_hover.png" ng-show="hover_mysore" alt="pin" class="pin_slide1 pin_hover" style="bottom:15.5%;left:43.7%;">
+        <span class="pin_slide1 pin_name animate_right" style="bottom: 19%;left: 46.8%;">Mysore</span>
+        <img src="images/contact/map_pin.png" ng-hide="hover_colombia" alt="pin" class="pin_slide2 pin" style="bottom: 7%;left: 21.5%;">
+        <img src="images/contact/map_pin_hover.png" ng-show="hover_colombia" alt="pin" class="pin_slide2 pin_hover" style="bottom: 7%;left: 20.8%;">
+        <span class="pin_slide2 pin_name animate_left" style="bottom: 8%;left: 15%;">Colombia</span>
+        <img src="images/contact/map_pin.png" ng-hide="hover_nottingham" alt="pin" class="pin_slide2 pin" style="top: 17%;left: 43.5%;">
+        <img src="images/contact/map_pin_hover.png" ng-show="hover_nottingham" alt="pin" class="pin_slide2 pin_hover" style="top: 12%;left: 43%;">
+        <span class="pin_slide2 pin_name animate_left" style="top: 18%;left: 34.5%;">United Kingdom</span>
+        <img src="images/contact/map_pin.png" ng-hide="hover_dubai" alt="pin" class="pin_slide2 pin" style="bottom: 32%;left: 60%;">
+        <img src="images/contact/map_pin_hover.png" ng-show="hover_dubai" alt="pin" class="pin_slide2 pin_hover" style="bottom: 32%;left: 59.4%;">
+        <span class="pin_slide2 pin_name animate_left" style="bottom: 44%;left: 56.5%;color:#FFF;">United Arab Emirates</span>
+      </div>
+    </div>
+  </div><!--/map_main-->
+  <div class="addresses" layout="column">
+    <div class="header">
+      {{'find_us' | translate}}
+    </div>
+    <div layout="row" layout-align="center center" class="contact_slide">
+      <div layout="row" flex="100" class="slide1" ng-class="{'addresses_slide1': goRight}">
+        <div layout="column" flex>
+          <div layout="row">
+            <div layout="row" flex class="copenhagen" ng-mouseover="hover_copenhagen = 'true'" , ng-mouseleave="hover_copenhagen = !hover_copenhagen">
+              <div class="slide_image">
+                <img src="images/contact/contactus_1.png" alt="Copenhagen pin">
+              </div>
+              <div class="slide_text">
+                <span>{{'copenhagen.name'  | translate}}</span>
+                <p>{{'copenhagen.line1' | translate}}</p>
+                <p>{{'copenhagen.line2' | translate}}</p>
+                <p>{{'copenhagen.line3' | translate}}</p>
+                <p>{{'copenhagen.line4' | translate}}</p>
+              </div>
+            </div>
+            <div layout="row" flex class="paris" ng-mouseover="hover_paris = 'true'" ng-mouseleave="hover_paris = !hover_paris">
+              <div class="slide_image">
+                <img src="images/contact/contactus_2.png" alt="Paris pin">
+              </div>
+              <div class="slide_text">
+                <span>{{'paris.name'  | translate}}</span>
+                <p>{{'paris.line1' | translate}}</p>
+                <p>{{'paris.line2' | translate}}</p>
+                <p>{{'paris.line3' | translate}}</p>
+                <p>{{'paris.line4' | translate}}</p>
+              </div>
+            </div>
+          </div>
+          <div layout="row">
+            <div layout="row" flex class="coimbatore" ng-mouseover="hover_coimbatore = 'true'" ng-mouseleave="hover_coimbatore = !hover_coimbatore">
+              <div class="slide_image">
+                <img src="images/contact/contactus_3.png" alt="Coimbatore pin">
+              </div>
+              <div class="slide_text">
+                <span>{{'coimbatore.name'  | translate}}</span>
+                <p>{{'coimbatore.line1' | translate}}</p>
+                <p>{{'coimbatore.line2' | translate}}</p>
+                <p>{{'coimbatore.line3' | translate}}</p>
+                <p>{{'coimbatore.line4' | translate}}</p>
+                <p>{{'coimbatore.line5' | translate}}</p>
+              </div>
+            </div>
+            <div layout="row" flex class="mysore" ng-mouseover="hover_mysore = 'true'" ng-mouseleave="hover_mysore = !hover_mysore">
+              <div class="slide_image">
+                <img src="images/contact/contactus_4.png" alt="Mysore pin">
+              </div>
+              <div class="slide_text">
+                <span>{{'mysore.name'  | translate}}</span>
+                <p>{{'mysore.line1' | translate}}</p>
+                <p>{{'mysore.line2' | translate}}</p>
+                <p>{{'mysore.line3' | translate}}</p>
+                <p>{{'mysore.line' | translate}}</p>
+                <p>{{'mysore.line5' | translate}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide2" layout="row" flex="100">
+        <div layout="column" flex>
+          <div layout="row">
+            <div layout="row" flex class="colombia" ng-mouseover="hover_colombia = 'true'" ng-mouseleave="hover_colombia = !hover_colombia">
+              <div class="slide_image">
+                <img src="images/contact/columbia_icon.png" alt="Colombia pin">
+              </div>
+              <div class="slide_text">
+                <span>{{'colombia.name'  | translate}}</span>
+                <p>{{'colombia.line1' | translate}}</p>
+                <p>{{'colombia.line2' | translate}}</p>
+                <p>{{'colombia.line3' | translate}}</p>
+                <p>{{'colombia.line4' | translate}}</p>
+                <p>{{'colombia.line5' | translate}} </p>
+              </div>
+            </div>
+            <div layout="row" flex class="nottingham" ng-mouseover="hover_nottingham = 'true'" ng-mouseleave="hover_nottingham = !hover_nottingham">
+              <div class="slide_image">
+                <img src="images/contact/nottingham_icon.png" alt="Nottingham pin">
+              </div>
+              <div class="slide_text">
+                <span>{{'unitedkingdom.name'  | translate}}</span>
+                <p>{{'unitedkingdom.line1' | translate}}</p>
+                <p>{{'unitedkingdom.line2' | translate}}</p>
+                <p>{{'unitedkingdom.line3' | translate}}</p>
+                <p>{{'unitedkingdom.line4' | translate}}</p>
+              </div>
+            </div>
+          </div>
+          <div layout="row">
+            <div layout="row" flex="60" class="united_arab_emirates" ng-mouseover="hover_dubai = 'true'" ng-mouseleave="hover_dubai = !hover_dubai">
+              <div class="slide_image">
+                <img src="images/contact/dubai1.png" alt="United Arab Emirates pin">
+              </div>
+              <div class="slide_text">
+                <span>{{'arabemirates.name'  | translate}}</span>
+                <p>{{'arabemirates.line1' | translate}}</p>
+                <p>{{'arabemirates.line2' | translate}}</p>
+                <p>{{'arabemirates.line3' | translate}}</p>
+                <p>{{'arabemirates.line4' | translate}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navigation" layout-align="center center">
+        <ul>
+          <li><img slidetoright src="images/contact/whitearrowright.png" alt="arrow" class="arrow_right"></li>
+          <li><img slidetoleft src="images/contact/whitearrowleft.png" alt="arrow" class="arrow_left"></li>
+        </ul>
+      </div>
+      <hr class="contact_line">
+    </div>
+  </div>
+</div>
+<div layout="column" id="contact" ng-init="question = 'true'" data-ng-controller="ContactCtrl as cc">
+  <h1>{{'contact_us' | translate}}</h1>
+  <p>{{'contact_help' | translate}}</p>
+  <div layout="row" layout-align="center center" layout-xs="column">
+    <button id="contact_btn" class="button" ng-click="question = 'true';kickstart = 'false'" ng-class="{'selected':question == 'true'}">{{'contact_ask' | translate}}</button>
+    <span class="separator">{{'or'  | translate}}</span>
+    <button id="project_btn" class="button" ng-click="kickstart = 'true';question = 'false'" ng-class="{'selected':kickstart == 'true'}">{{'kickstart' | translate}}</button>
+  </div>
+  <!-- Ask a question -->
+  <form id="question" name="questionForm" ng-show="question == 'true'"  layout="column" ng-submit="cc.questionMail()">
+    <div layout="row" layout-align="center center">
+      <div flex="70" flex-sm="100" flex-xs="100" layout="row" layout-xs="column">
+        <div layout="row" flex layout-padding>
+          <md-input-container>
+          <label>{{'name' | translate}}</label>
+          <input type="text" name="name" data-ng-model="cc.name" required>
+          <span ng-show="questionForm.name.$dirty && questionForm.name.$error.required">Please Enter Your Name</span>
+          </md-input-container>
+        </div>
+        <div layout="row" flex layout-padding>
+          <md-input-container>
+          <label>{{'mail' | translate}}</label>
+          <input type="email" name="email" data-ng-model="cc.email" required>
+          <span ng-show="questionForm.email.$dirty && questionForm.email.$error.required">Please Enter Your Email</span>
+          <span ng-show="questionForm.email.$error.email">Invalid Email!</span>
+          </md-input-container>
+        </div>
+      </div>
+    </div>
+    <div layout="row" layout-align="center center">
+      <div flex="70" flex-sm="100" flex-xs="100" layout="row" layout-xs="column">
+        <div layout="row" flex layout-padding>
+          <md-input-container>
+          <label>{{'company' | translate}}</label>
+          <input type="text" name="company" data-ng-model="cc.company" >
+          </md-input-container>
+        </div>
+        <div layout="row" flex layout-padding>
+          <md-input-container>
+          <label>{{'website' | translate}}</label>
+          <input type="text" name="website" data-ng-model="cc.website" >
+          </md-input-container>
+        </div>
+      </div>
+    </div>
+    <div layout="row" layout-align="center center">
+      <div flex="70" flex-sm="100" flex-xs="100" layout="row" layout-padding>
+        <md-input-container class="md-block">
+        <label>{{'message' | translate}}</label>
+        <textarea name="message" columns="1" rows="7" aria-label="Message" required ng-minlength="10" ng-maxlength="100" data-ng-model="cc.message" ></textarea>
+        <span ng-show="questionForm.message.$dirty && questionForm.message.$error.required">Plese write your Message</span>
+        <span ng-show="questionForm.message.$error.minlength">too Short!</span>
+        <span ng-show="questionForm.message.$error.maxlength">too Long!</span>
+        </md-input-container>
+      </div>
+    </div>
+    <div layout="row" layout-align="center center">
+      <div flex="70" flex-sm="100" flex-xs="100" layout="row" layout-xs="column">
+        <div flex layout="row" layout-padding layout-align="start center">
+          {{'hear_us' | translate}}
+        </div>
+        <div flex layout-padding>
+          <md-input-container>
+          <md-select ng-model="option1" aria-label="option how do you hear about us">
+          <md-option value="Social media">
+          {{'media' | translate}}
+          </md-option>
+          <md-option value="Referral">
+          {{'referral' | translate}}
+          </md-option>
+          <md-option value="Others">
+          {{'others' | translate}}
+          </md-option>
+          </md-select>
+          </md-input-container>
+        </div>
+        <div flex layout-padding>
+          <md-input-container>
+          <md-select ng-model="option2" ng-disabled="!option1" aria-label="option how do you hear about us">
+          <md-option value="LinkedIn" ng-if="option1 == 'Social media'">
+          {{'linkedin' | translate}}
+          </md-option>
+          <md-option value="Twitter" ng-if="option1 == 'Social media'">
+          {{'twitter' | translate}}
+          </md-option>
+          <md-option value="Facebook" ng-if="option1 == 'Social media'">
+          {{'facebook' | translate}}
+          </md-option>
+          <md-option value="Youtube" ng-if="option1 == 'Social media'">
+          {{'youtube' | translate}}
+          </md-option>
+          <md-option value="WDClient" ng-if="option1 == 'Referral'">
+          {{'wdclient' | translate}}
+          </md-option>
+          <md-option value="WDEmployee" ng-if="option1 == 'Referral'">
+          {{'wdemployee' | translate}}
+          </md-option>
+          <md-option value="Search Engine" ng-if="option1 == 'Others'">
+          {{'engine' | translate}}
+          </md-option>
+          <md-option value="Event" ng-if="option1 == 'Others'">
+          {{'event' | translate}}
+          </md-option>
+          <md-option value="Web advert" ng-if="option1 == 'Others'">
+          {{'advert' | translate}}
+          </md-option>
+          <md-option value="Article" ng-if="option1 == 'Others'">
+          {{'article' | translate}}
+          </md-option>
+          </md-select>
+          </md-input-container>
+        </div>
+      </div>
+    </div>
+    <div layout="row" layout-align="center center">
+      <div flex="70" layout="row" layout-align="center center">
+        <button class="button send" ng-disabled="questionForm.$invalid">{{'send' | translate}}</button>
+      </div>
+    </div>
+  </form>
+  <!-- end/Ask a question -->
+  <!-- Kickstart your project -->
+  <form id="kickstart" name="kickstartForm" ng-show="kickstart == 'true'" layout="column" ng-submit="cc.kickstartMail()">
+    <div layout="row" layout-align="center center">
+      <div flex="70" flex-sm="100" flex-xs="100" layout="row" layout-xs="column">
+        <div layout="row" flex layout-padding>
+          <md-input-container>
+          <label>{{'fname' | translate}}
+            <span class="star">*</span>
+          </label>
+          <input type="text" name="fName" data-ng-model="cc.fName" required>
+          <span ng-show="kickstartForm.fName.$dirty && kickstartForm.fName.$error.required">Your First Name is Required</span>
+          </md-input-container>
+        </div>
+        <div layout="row" flex layout-padding>
+          <md-input-container>
+          <label>{{'lname' | translate}}
+            <span class="star">*</span>
+          </label>
+          <input type="text" name="lName" data-ng-model="cc.lName" required>
+          <span ng-show="kickstartForm.lName.$dirty && kickstartForm.lName.$error.required">Your Last Name is Required</span>
+          </md-input-container>
+        </div>
+      </div>
+    </div>
+    <div layout="row" layout-align="center center">
+      <div flex="70" flex-sm="100" flex-xs="100" layout="row" layout-xs="column">
+        <div layout="row" flex layout-padding>
+          <md-input-container>
+          <label>{{'email' | translate}}
+            <span class="star">*</span>
+          </label>
+          <input type="email" name="email1" data-ng-model="cc.email1" required>
+          <span ng-show="kickstartForm.email1.$dirty && kickstartForm.email1.$error.required">Your E-mail Address is Required</span>
+          <span ng-show="kickstartForm.email1.$error.email">Invalid Email!</span>
+          </md-input-container>
+        </div>
+        <div layout="row" flex layout-padding>
+          <md-input-container>
+          <label>{{'number' | translate}}</label>
+          <input type="number" name="phone" data-ng-model="cc.phone" >
+          </md-input-container>
+        </div>
+      </div>
+    </div>
+    <div layout="row" layout-align="center center">
+      <div flex="70" flex-sm="100" flex-xs="100" layout="row" layout-xs="column">
+        <div layout="row" flex layout-padding>
+          <md-input-container>
+          <label>{{'cname' | translate}}</label>
+          <input type="text" name="company1" data-ng-model="cc.company1">
+          </md-input-container>
+        </div>
+        <div layout="row" flex layout-padding>
+          <md-input-container>
+          <label>{{'cwebsite' | translate}}</label>
+          <input type="text" name="website1" data-ng-model="cc.website1">
+          </md-input-container>
+        </div>
+      </div>
+    </div>
+    <div layout="row" layout-align="center center"> ``
+      <div flex="70" flex-sm="100" flex-xs="100" layout="row" layout-xs="column">
+        <div layout="column" flex layout-padding>
+          <label>{{'prototype' | translate}}</label>
+          <span class="legend">{{'drawing' | translate}}</span>
+          <input class="input1" type="file" name="file1" file-model = "file1"/>
+          <input class="input2" type="file" name="file2" file-model = "file2"/>
+          <div layout="row" layout-align='end'>
+            <button class="button small" ng-click = "uploadFile()">{{'upload' | translate}}</button>
+          </div>
+        </div>
+        <div class="urgency_level"layout="column" flex layout-padding>
+          <label>{{'urgency' | translate}}</label>
+          <div layout="row">
+            <md-radio-group ng-model="urgency" layout="row">
+            <md-radio-button type="radio" name="urgency" value="low" class="md-primary"> {{'low' | translate}} </md-radio-button>
+            <md-radio-button type="radio" name="urgency" value="medium"> {{'medium' | translate}} </md-radio-button>
+            <md-radio-button type="radio" name="urgency" value="high"> {{'high' | translate}} </md-radio-button>
+            </md-radio-group>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div layout="row" layout-align="center center">
+      <div flex="70" flex-sm="100" flex-xs="100" layout="row" layout-padding>
+        <div layout="column" flex>
+          <label>{{'project' | translate}}
+            <span class="star">*</span>
+          </label>
+          <span class="legend">{{'features' | translate}}
+          </span>
+          <md-input-container>
+          <textarea data-ng-model="cc.message1" name="message1" columns="1" rows="7" aria-label="message" required ng-minlength="10" ng-maxlength="100" ></textarea>
+          <span ng-show="kickstartForm.message1.$dirty && kickstartForm.message1.$error.required">Please Write Your Message</span>
+          <span ng-show="kickstartForm.message1.$error.minlength">Too Short!</span>
+          <span ng-show="kickstartForm.message1.$error.maxlength">Too Long!</span>
+          </md-input-container>
+        </div>
+      </div>
+    </div>
+    <div layout="row" layout-align="center center">
+      <div flex="70" flex-sm="100" flex-xs="100" layout="row" layout-xs="column">
+        <div flex layout="row" layout-padding layout-align="start center">
+          {{'contact_about' | translate}}
+        </div>
+        <div flex layout-padding>
+          <md-input-container>
+          <md-select ng-model="option1k" aria-label="option how do you hear about us">
+          <md-option value="Social media" name="option1k">
+          {{'media' | translate}}
+          </md-option>
+          <md-option value="Referral" name="option1k">
+          {{'referral' | translate}}
+          </md-option>
+          <md-option value="Others" name="option1k">
+          {{'others' | translate}}
+          </md-option>
+          </md-select>
+          </md-input-container>
+        </div>
+        <div flex layout-padding>
+          <md-input-container>
+          <md-select ng-model="option2k" ng-disabled="!option1k" aria-label="option how do you hear about us">
+          <md-option value="LinkedIn" ng-if="option1k == 'Social media'" name="option2k">
+          {{'linkedin' | translate}}
+          </md-option>
+          <md-option value="Twitter" ng-if="option1k == 'Social media'" name="option2k">
+          {{'twitter' | translate}}
+          </md-option>
+          <md-option value="Facebook" ng-if="option1k == 'Social media'" name="option2k">
+          {{'facebook' | translate}}
+          </md-option>
+          <md-option value="Youtube" ng-if="option1k == 'Social media'" name="option2k">
+          {{'youtube' | translate}}
+          </md-option>
+          <md-option value="WDClient" ng-if="option1k == 'Referral'" name="option2k">
+          {{'wdclient' | translate}}
+          </md-option>
+          <md-option value="WDEmployee" ng-if="option1k == 'Referral'" name="option2k">
+          {{'wdemployee' | translate}}
+          </md-option>
+          <md-option value="Search Engine" ng-if="option1k == 'Others'" name="option2k">
+          {{'engine' | translate}}
+          </md-option>
+          <md-option value="Event" ng-if="option1k == 'Others'" name="option2k">
+          {{'event' | translate}}
+          </md-option>
+          <md-option value="Web advert" ng-if="option1k == 'Others'" name="option2k">
+          {{' advert' | translate}}
+          </md-option>
+          <md-option value="Article" ng-if="option1k == 'Others'" name="option2k">
+          {{'article' | translate}}
+          </md-option>
+          </md-select>
+          </md-input-container>
+        </div>
+      </div>
+    </div>
+    <div layout="row" layout-align="center center">
+      <div flex="70" layout="row" layout-align="center center">
+        <button class="button send" ng-disabled="kickstartForm.$invalid">{{'confirm' | translate}}</button>
+      </div>
+    </div>
+  </form>
+  <!-- Kickstart your project -->
+</div>

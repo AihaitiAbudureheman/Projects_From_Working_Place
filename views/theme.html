@@ -1,0 +1,112 @@
+<update-title title="Shop | Mobile and Web Apps Development | Wiredelta"></update-title>
+<update-meta name="description" content="Wiredelta is a full service web agency for web design and development, mobile application development (iOS and Android), web hosting and digital marketing."></update-meta>
+
+<div class="container-fluid packages" id="shopView">
+	<div class="row" ng-controller='PackagesCtrl'>
+
+		<div class="jumbotron shopHeader">
+			<div class="container-fluid">
+				<div class="row row-header">
+					<div class="col-xs-12">
+						<p id="intro">Get a FREE web or mobile app</p>
+					</div>
+
+					<div class="col-xs-12" id="sliderContainer">               
+						<div class="container slider" ng-controller="SliderCtrl">
+							<ul>		
+								<li class="slide-{{$index}}" ng-repeat="slide in slides" id="test" repeat-directive>
+									<img ng-src="{{slide}}">
+								</li>		
+							</ul>
+						</div>
+					</div>
+					
+				</div> 
+			</div>
+		</div>
+
+		<div class="themeTypeWrapper">
+			<div class="col-xs-12 col-sm-2 col-sm-offset-3">
+				<button class="btn btn-lg" ng-click='categoryClick(0)' ng-class="{'selectedCategory': websiteCat, 'headerBtn':!websiteCat}">
+					WEBSITE
+				</button>
+			</div>
+			<div class="col-xs-12 col-sm-2">
+				<button class="btn btn-lg" ng-click='categoryClick(1)' ng-class="{'selectedCategory': webshopCat, 'headerBtn':!webshopCat}">
+					WEBSHOP
+				</button>
+			</div> 
+			<div class="col-xs-12 col-sm-2">
+				<button class="btn btn-lg" ng-click='categoryClick(2)' ng-class="{'selectedCategory': appCat, 'headerBtn':!appCat}">
+					APP
+				</button>
+			</div>
+		</div>
+
+		<div class="col-xs-12 sortContainer">
+			<ol class="breadcrumb">
+				<span><strong>Sort by: </strong></span>
+				<li id="sortRating" ><span ng-click="sortRating()">Most sold</span><span class="glyphicon glyphicon-sort" ng-show="orderRating" ng-click="getReverse()"></li>
+				<li id="sortDate" ><span ng-click="sortDate()">Most recent</span><span class="glyphicon glyphicon-sort" ng-show="orderDate" ng-click="getReverse()"></span></li>
+				<li id="sortName"><span ng-click="sortName()">Name</span><span class="glyphicon glyphicon-sort" ng-show="orderName" ng-click="getReverse()"></span></li>
+			</ol>
+		</div>
+
+		<!--Themes repeat right here -->
+		<div class="themesWrapper container-fluid">
+			<div class="themes col-xs-12" ng-controller="themeModal" ng-cloak>
+				<div class="col-xs-12 col-md-6 col-lg-4 test" ng-repeat="theme in getThemes track by $index" on-finish-render="ngRepeatFinished" ng-cloak>		
+					<div class="oneTheme">				
+						<div class="col-xs-12 demoHover">
+							<img id="themeAnimation{{$index}}" ng-src="http://wd-agency.com:5062/img/themes/{{theme.imgUrl}}" animation ng-cloak>
+						</div>						
+						<div class="col-xs-6 ">
+							<h2 class="themeTitle" ng-mouseover="displayHeader($event)">{{theme.title | uppercase}}</h2>
+							<h2 class="themeTitle headerHolder" ng-hide="true">{{theme.title | uppercase}}</h2>
+							<h4>{{theme.framework}}</h4>
+						</div>
+						<div class="col-xs-6 themeButton">
+							<div class="col-xs-6"><button class="buttonSelectDemo" ng-click=" showDemo($event,theme.previewUrl,theme.title)">Demo</button></div>
+							<div class="col-xs-6"><button class="buttonSelectDemo" ng-click="setChoosenTheme(theme.id); showAdvanced($event,theme)">Select</button></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 endOfThemes" ng-if="endOfCategory">
+				<p>Come back later for more themes!</p>
+			</div>
+			<div id="loadingSpace"></div>
+		</div>
+
+			<!-- Working Pagination replaced with infinite scroll
+			<nav class="col-xs-12">
+				<ul class="pagination">
+					<li class="page-item disabled" id="buttonPrev" ng-if="currentPage>0">
+						<a class="page-link prevNex" aria-label="Previous" ng-click="getNewThemes(currentPage-1); setCurrentPage(currentPage-1); getPagesLeft()">
+							<span aria-hidden="true">Previous</span>		
+						</a>
+					</li>
+
+					<li class="{{x.class}}" id="pageNumber{{x.id}}" ng-repeat="x in pages" ng-if="numOfPages>$index">
+						<a class="page-link number" ng-click="getNewThemes(x.id);getPagesByNumberClick(x.id,currentPage);setCurrentPage(x.id)"> {{x.title}} </a>
+					</li>  
+
+					<li class="page-item" id="buttonNext" ng-if="currentPage < (numOfPages-1)">
+						<a class="page-link prevNex" aria-label="Next" ng-click="getNewThemes(currentPage+1); setCurrentPage(currentPage+1); getPagesRight()">
+							<span aria-hidden="true">Next</span>   				
+						</a>
+					</li>
+				</ul>
+			</nav>
+		-->
+
+	</div>
+</div>
+
+<!-- Contactus bar at the bottom, replaced for infinite scroll
+<div class="contactUs">
+	<a href="http://wiredelta.com/#!/contact/en" target="_blank"><h1>Can't decide which theme is right for you? Contact us!</h1></a>
+</div>
+-->
+
+

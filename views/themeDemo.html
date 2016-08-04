@@ -1,0 +1,46 @@
+<md-dialog class="col-xs-10 modalStyles" id="demoModal" style="color:#484743; font-family: colaborate-thinregular; border-radius:none; text-align: center;" ng-cloak>
+  <form id="demoModalForm">
+
+   
+    <md-toolbar style="background:none; min-height:48px;" id="demoToolbar">
+      <div class="md-toolbar-tools modalBar">
+        <h1 class='demoName' id="toolbarTitle">{{demoTitle|uppercase}}</h1>
+        <span flex class="flex"></span>
+        <md-button id="md-close" class="md-icon-button" ng-click="cancel()" style="color:#484743; border:none; margin-bottom:none;">
+          <md-icon md-svg-src="images/icons/ic_close_white_24px.svg"></md-icon>
+        </md-button>   
+      </div>
+    </md-toolbar>
+
+    <iframe id="demoBox" src="{{demoUrl}}" style="height:1000px; width:99.6%;">
+      <p>Your browser does not support iframe.</p>
+    </iframe>
+
+    <md-tabs md-no-pagination="false" md-stretch-tabs="auto" md-selected="0" md-center-tabs="true" id="demoTabs">
+      <md-tab  md-on-select="responsive()">
+        <md-tab-label>
+          <md-icon md-svg-src="images/icons/ic_devices_other_black_36px.svg"></md-icon>
+        </md-tab-label>
+      </md-tab>
+
+      <md-tab  md-on-select="desktop()">
+        <md-tab-label>
+          <md-icon md-svg-src="images/icons/ic_desktop_windows_black_36px.svg"></md-icon>
+        </md-tab-label>
+      </md-tab>
+
+      <md-tab  md-on-select="tablet()">
+        <md-tab-label>
+          <md-icon md-svg-src="images/icons/ic_tablet_mac_black_36px.svg"></md-icon>
+        </md-tab-label>
+      </md-tab>
+
+      <md-tab  md-on-select="mobile()">
+        <md-tab-label>
+          <md-icon md-svg-src="images/icons/ic_stay_current_portrait_black_36px.svg"></md-icon>
+        </md-tab-label>
+      </md-tab>
+    </md-tabs>
+
+  </form>
+</md-dialog>

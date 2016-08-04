@@ -1,0 +1,233 @@
+<update-title title="{{serviceObj.services_meta_title | translate}}"></update-title>
+<update-meta name="description" content="{{serviceObj.services_meta_description | translate}}"></update-meta>
+
+<div id="service_page">
+
+  <!-- Banner Section -->
+  <div class="service-banner">
+    <img ng-src="http://wd-agency.com:5062/img/services/{{serviceObj.services_bannerimage | translate}}" class="img-responsive" alt="{{serviceObj.services_imagetext | translate}}">
+    <h1 class="banner_text">{{serviceObj.services_heading1 | translate}}<br><br>{{serviceObj.services_heading2 | translate}}</h1>
+  </div>
+  <!--End of Banner Section -->
+
+  <section id="services">
+    <!-- Title And Sub-Title Sction -->
+    <div layout-align="center center" layout="column" class="title_section">
+      <div class="scroll_down" layout-align="center" layout="row">
+        <md-icon md-svg-icon="images/icons/ic_keyboard_arrow_down_black_48px.svg" id="down" du-smooth-scroll="down" offset="30" duration="800"></md-icon>
+      </div>
+      <h1 layout-align="center" layout="row">{{serviceObj.services_title | translate}}</h1>
+      <p>{{serviceoBJ.services_description | translate}}</p>
+    </div>
+    <!-- End of Title And Sub-Title Sction -->
+
+
+    <!-- Service Icon layout -->
+    <div layout-align="center" layout="row">
+      <div flex="20" class="service_icon_wrapper">
+        <a href="#web" du-smooth-scroll offset="80">
+          <img ng-src="http://wd-agency.com:5062/img/services/{{ serviceObj.web_service_icon_img | translate }}" class="img-responsive service-icon" alt="{{ serviceObj.web_service_desc | translate }}">
+        </a>
+        <br>
+        <span class="icon-text">{{ 'categories.'+ 0 +'.desc' | translate }}</span>
+      </div>
+
+      <div flex="20" class="service_icon_wrapper">
+        <a href="#mobile" du-smooth-scroll offset="80">
+          <img ng-src="http://wd-agency.com:5062/img/services/{{ serviceObj.mobile_service_icon_img | translate }}" class="img-responsive service-icon" alt="{{ serviceObj.mobile_service_desc | translate }}">
+        </a>
+
+        <br>
+        <span class="icon-text">{{ 'categories.'+ 1 +'.desc' | translate }}</span>
+      </div>
+
+      <div flex="20" class="service_icon_wrapper">
+        <a href="#extra" du-smooth-scroll offset="80">
+          <img ng-src="http://wd-agency.com:5062/img/services/{{serviceObj.extra_service_icon_img | translate }}" class="img-responsive service-icon" alt="{{ serviceObj.extra_service_desc | translate }}">
+
+        </a>
+        <br>
+        <span class="icon-text">{{ 'categories.'+ 2 +'.desc' | translate }}</span>
+      </div>
+    </div>
+    <!--End of service icon-->
+
+    <!-- Technologies link-->
+    <div layout="row" layout-align="center center" id="tech_row">
+      <a ui-sref="{{serviceObj.services_technology_link | translate}}({langcode:language})" id="technologies"><h3 id="tech_header">{{serviceObj.services_technology | translate}}</h3></a>
+    </div>
+    <!--  End of Technologies link-->
+
+    <!-- Service Category Row-->
+    <div layout="column" layout-align="center center" class="app_row">
+      <!--First category-->
+      <h2 class="app_header" id="web">{{ serviceObj.web_service_desc | translate }}</h2>
+      <div layout="row" layout-xs="column" layout-sm="column" layout-fill="true">
+
+        <!--Service Box 1-->
+        <div flex="33" flex-xs="100" flex-sm="100" class="single_app">
+          <div class="service_box">
+            <img ng-src="http://wd-agency.com:5062/img/services/{{serviceObj.promotional_img | translate}}" class="leave" alt="{{serviceObj.promotional_heading | translate}}">
+            <h4 class="leave_title">{{serviceObj.promotional_heading | translate}}</h4>
+            <p flex="100">{{serviceObj.promotional_description | translate}}
+              <br>
+              <a ui-sref="{{serviceObj.promotional_link}}({langcode:language})">
+                <md-button class="read_more_btn">
+                  {{serviceObj.services_buttontext |translate}}
+                </md-button>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!--Service Box 2-->
+        <div flex="33" flex-xs="100" flex-sm="100" class="single_app">
+          <div class="service_box">
+            <img ng-src="http://wd-agency.com:5062/img/services/{{serviceObj.ecommerce_img | translate}}" class="leave" alt="{{serviceObj.ecommerce_heading | translate}}">
+            <h4 class="leave_title">{{serviceObj.ecommerce_heading | translate}}</h4>
+            <p flex="100">{{serviceObj.ecommerce_description | translate}}
+              <br>
+              <a ui-sref="{{serviceObj.ecommerce_link | translate}}({langcode:language})">
+                <md-button class="read_more_btn">
+                  {{serviceObj.services_buttontext|translate}}
+                </md-button>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!--Service Box 3-->
+        <div flex="33" flex-xs="100" flex-sm="100" class="single_app">
+          <div class="service_box">
+            <img ng-src="http://wd-agency.com:5062/img/services/{{serviceObj.landing_img | translate}}" class="leave" alt="{{serviceObj.landing_heading | translate}}">
+            <h4 class="leave_title">{{serviceObj.landing_heading | translate}}</h4>
+            <p flex="100">{{serviceObj.landing_description | translate}}
+              <br>
+              <a ui-sref="{{serviceObj.landing_link | translate}}({langcode:language})">
+                <md-button class="read_more_btn">
+                  {{serviceObj.services_buttontext | translate}}
+                </md-button>
+              </a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!--Second Category-->
+      <h2 class="app_header" id="mobile">{{ serviceObj.mobile_service_desc | translate }}</h2>
+      <div layout="row" layout-xs="column" layout-sm="column" layout-fill="true">
+
+        <!--Service Box 1-->
+        <div flex="33" flex-xs="100" flex-sm="100" class="single_app">
+          <div class="service_box">
+            <img ng-src="http://wd-agency.com:5062/img/services/{{serviceObj.ios_img | translate}}" class="leave" alt="{{serviceObj.ios_heading | translate}}">
+            <h4 class="leave_title">{{serviceObj.ios_heading | translate}}</h4>
+            <p flex="100">{{serviceObj.ios_description | translate}}
+              <br>
+              <a ui-sref="{{serviceObj.ios_link | translate}}({langcode:language})">
+                <md-button class="read_more_btn">
+                  {{serviceObj.services_buttontext | translate}}
+                </md-button>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!--Service Box 2-->
+        <div flex="33" flex-xs="100" flex-sm="100" class="single_app">
+          <div class="service_box">
+            <img ng-src="http://wd-agency.com:5062/img/services/{{serviceObj.android_img | translate}}" class="leave" alt="{{serviceObj.android_heading | translate}}">
+            <h4 class="leave_title">{{serviceObj.android_heading | translate}}</h4>
+            <p flex="100">{{serviceObj.android_description | translate}}
+              <br>
+              <a ui-sref="{{serviceObj.android_link | translate}}({langcode:language})">
+                <md-button class="read_more_btn">
+                  {{serviceObj.services_buttontext | translate}}
+                </md-button>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!--Service Box 3-->
+        <div flex="33" flex-xs="100" flex-sm="100" class="single_app">
+          <div class="service_box">
+            <img ng-src="http://wd-agency.com:5062/img/services/{{serviceObj.hybrid_img | translate}}" class="leave" alt="{{serviceObj.hybrid_heading | translate}}">
+            <h4 class="leave_title">{{serviceObj.hybrid_heading | translate}}</h4>
+            <p flex="100">{{serviceObj.hybrid_description | translate}}
+              <br>
+              <a ui-sref="{{serviceObj.hybrid_link | translate}}({langcode:language})">
+                <md-button class="read_more_btn">
+                  {{serviceObj.services_buttontext | translate}}
+                </md-button>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Third Category-->
+      <h2 class="app_header" id="extra">{{ serviceObj.extra_service_desc | translate }}</h2>
+      <div layout="row" layout-xs="column" layout-sm="column" layout-fill="true">
+
+        <!--Service Box 1-->
+        <div flex="33" flex-xs="100" flex-sm="100" class="single_app">
+          <div class="service_box">
+            <img ng-src="http://wd-agency.com:5062/img/services/{{serviceObj.design_img | translate}}" class="leave" alt="{{serviceObj.design_heading | translate}}">
+            <h4 class="leave_title">{{serviceObj.design_heading | translate}}</h4>
+            <p flex="100">{{serviceObj.design_description | translate}}
+              <br>
+              <a ui-sref="{{serviceObj.design_link | translate}}({langcode:language})">
+                <md-button class="read_more_btn">
+                  {{serviceObj.services_buttontext | translate}}
+                </md-button>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!--Service Box 2-->
+        <div flex="33" flex-xs="100" flex-sm="100" class="single_app">
+          <div class="service_box">
+            <img ng-src="images/services/{{serviceObj.hosting_img | translate}}" class="leave" alt="{{serviceObj.hosting_heading | translate}}">
+            <h4 class="leave_title">{{serviceObj.hosting_heading | translate}}</h4>
+            <p flex="100">{{serviceObj.hosting_description | translate}}
+              <br>
+              <a ui-sref="{{serviceObj.hosting_link}}({langcode:language})">
+                <md-button class="read_more_btn">
+                  {{serviceObj.services_buttontext|translate}}
+                </md-button>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!--Service Box 3-->
+        <div flex="33" flex-xs="100" flex-sm="100" class="single_app">
+          <div class="service_box">
+            <img ng-src="http://wd-agency.com:5062/img/services/{{serviceObj.seo_img | translate}}" class="leave" alt="{{serviceObj.seo_heading | translate}}">
+            <h4 class="leave_title">{{serviceObj.seo_heading | translate}}</h4>
+            <p flex="100">{{serviceObj.seo_description | translate}}
+              <br>
+              <a ui-sref="{{ serviceObj.seo_link | translate}}({langcode:language})">
+                <md-button class="read_more_btn">
+                  {{serviceObj.services_buttontext | translate}}
+                </md-button>
+              </a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--Let us know about our project -->
+    <a ui-sref="{{serviceObj.about_project_link|translate}}">
+      <div flex id="endRow" class="app_row" layout="column" layout-align="center center">
+        <h2 class="app_header" layout-margin> {{serviceObj.about_project |translate}} <img ng-src="http://wd-agency.com:5062/img/services/{{serviceObj.about_project_arrow | translate}}.png" alt="&rarr;"></h2>
+      </div>
+    </a>
+
+  </section>
+</div>

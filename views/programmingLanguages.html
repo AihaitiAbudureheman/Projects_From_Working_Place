@@ -1,0 +1,71 @@
+
+<update-title title="{{'programmingLanguages_meta_title' | translate}}"></update-title>
+<update-meta name="description" content="{{'programmingLanguages_meta_description' | translate}}"></update-meta>
+
+<div id="language_page">
+
+<!-- Banner Section -->
+<div class="language-banner">
+ <img ng-src="images/services/technologies/programmingLanguages/{{'ProgrammingLanguages_bannerimage' | translate}}.jpg" class="img-responsive" alt="{{'ProgrammingLanguages_imagetext' | translate}}">
+ <h1 class="language_banner_text">{{'ProgrammingLanguages_heading1' | translate}}<br /><br />{{'ProgrammingLanguages_heading2' | translate}}</h1>
+</div>
+<!--End of Banner Section -->
+
+<section id="languages">
+
+<!-- Title And Sub-Title Sction -->
+<div layout-align="center center" layout="column" class="language_title_section">
+ <div class="scroll_down" layout-align="center" layout="row">
+   <md-icon md-svg-icon="images/icons/ic_keyboard_arrow_down_black_48px.svg" id="down" du-smooth-scroll="down" offset="30" duration="800"></md-icon>
+ </div>
+ <h1 layout-align="center" layout="row">{{'ProgrammingLanguages_title' | translate}}</h1>
+ <p>{{'ProgrammingLanguages_description' | translate}}</p>
+</div>
+<!-- End of Title And Sub-Title Sction -->
+
+<!-- Technologies icon horizontal menu -->
+<div class="language_tab" ng-init="service_items=[0,1,2,3,4]">
+ <md-content>
+   <md-tabs  md-dynamic-height="" md-border-bottom="">
+     <md-tab   ng-repeat="service in service_items"  >
+       <md-tab-label layout="row">
+         <div>
+           <a href="#{{'item-'+service}}" du-smooth-scroll><img  ng-src="images/services/technologies/programmingLanguages/{{ 'programmingLanguages.'+ service +'.icon_img' | translate }}.png" class="img-responsive services_icon" alt="{{ 'programmingLanguages.'+ service +'.desc' | translate }}"></a>
+         </div>
+         <span class="language_icon_text">{{ 'programmingLanguages.'+ service +'.desc' | translate }}</span>
+       </md-tab-label> 
+     </md-tab>
+   </md-tabs>
+ </md-content>
+<!-- End of Technologies icon horizontal menu -->
+
+<!--List of programming languages-->
+<div  id="language_box" layout="column"  ng-repeat="list_item in service_items" >
+ <div id="language_container">
+   <div layout="row"   id="{{'item-'+list_item}}">
+     <h2 flex>{{'programmingLanguages.'+list_item+'.heading' | translate}}</h2>
+   </div>
+
+   <div layout"row" layout-gt-md="row" layout-md="row" -webkit-layout-sm="column" -webkit-layout-xs="column" id="{{'item-'+list_item}}" class="language_item">
+     <div flex="15" flex-sm="100" flex-xs="100" id="image"><img ng-src="images/services/technologies/programmingLanguages/{{'programmingLanguages.'+ list_item +'.img' | translate}}.png"  alt="{{'programmingLanguages.'+ list_item+'.heading' | translate}}"></div>
+     <P flex="85" flex-sm="100" flex-xs="100">
+     {{'programmingLanguages.'+ list_item +'.description' | translate}}
+     </p>
+   </div>
+ </div>
+</div>
+<!--End of list of programming languages-->
+
+
+<!--Link to customer's project page-->
+<div layout="row" id="aboutProject_language">
+ <div flex>
+   <a ui-sref="{{'about_project_url' | translate}}({langcode:language})" target="_blank"><h2>{{'about_project' | translate}}<img ng-src="images/services/technologies/{{'technologies_arrow' | translate}}.png"  alt="{{'technologies_arrow_alt' | translate}}"> </h2></a>
+ </div>
+</div>
+
+
+</div>
+<!-- End of md-tab -->
+</section>
+</div>

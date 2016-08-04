@@ -1,0 +1,230 @@
+
+/*-----Servics page styling starts---------*/
+/*Banner Section*/
+.service-banner {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 350px;
+    margin-top: 60px;
+}
+
+.service-banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.service-banner .banner_text {
+    font-family: GeosansLight;
+    position: absolute;
+    top: 100px;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    font-size:45px;
+}
+
+.banner_text{
+    margin-top: -10px;
+}
+/*Banner Section Ends*/
+
+/*Title And Sub-Title Sction*/
+#hosting_page section {
+    position: relative;
+    margin-top: 387px;
+    background-color: #fff;
+}
+
+.scroll_down {
+    width: 78px;
+    height: 78px;
+    margin-top: -40px;
+    border-radius: 100%;
+    background-color: #fff;
+}
+
+#hosting_page md-icon {
+    margin-top: 10px;
+    height: 36px;
+    width: 36px;
+}
+
+#hosting_page md-icon svg {
+    fill: #549db9;
+}
+
+.title_section h1 {
+    font-family: 'GeosansLight';
+    letter-spacing: 1px;
+    margin-top: 0;
+    text-align: center;
+}
+
+/*Title And Sub-Title Sction Ends*/
+
+
+/*icon buttons*/
+.service_icon_wrapper{
+    text-align: center !important;
+}
+
+.service-icon {
+    display: inline-block;
+    background-color: #549db9;
+    border: 2px solid #549db9;
+    border-radius: 100%;
+
+}
+
+.service-icon:hover {
+    box-shadow: rgba(0,0,0,0.4) 0px 0px 10px;
+    cursor: pointer;
+}
+
+/*description rows*/
+
+.dark_row{
+    background-color: #fafafa;
+}
+
+.description_row{
+    text-align: left;
+    color: #484743;
+}
+
+.description_header{
+    text-align: center;
+    font-family: 'colaborate-thinregular';
+    color: #58b6a2;
+}
+
+
+/*end row*/
+
+.app_header{
+    font-family:'GeosansLight';
+    color: #fff;
+    padding: 10px 0 15px 0;
+    text-align: center;
+}
+
+.app_row{
+    background-color: #549db9;
+}
+
+#endRow:hover{
+    background-color: #32312e;
+    cursor: pointer;
+}
+
+/*Number wheels*/
+#wd_in_number {
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.wd_in_number_inner {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.progress-wrapper {
+    position: relative;
+    margin: 50px auto;
+    font-size: 40px;
+    width: 100%;
+    height: 100px;
+}
+.progress-wrapper .round-progress-wrapper{
+    width: 100px !important;
+    margin:0 auto;
+}
+
+.progress-wrapper .progress {
+    position: absolute;
+    color: #000000;
+    font-weight: bold;
+    line-height: 1;
+    background-color: #ffffff;
+    border: none;
+    box-shadow: none;
+    height: 30px;
+}
+
+.wd_number {
+    font-family: "colaborate-thinregular";
+    font-size: 16px;
+    color: #484743;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: 5px;
+}
+
+
+/*-------------------------*/
+
+/*Responsive Desgin */
+
+@media only screen and (min-width:960px) {
+
+}
+
+@media only screen and (max-width:1023px) {
+    .service-banner .banner_text {
+        font-size: 35px;
+        top: 28%;
+    }
+}
+
+@media only screen and (max-width:959px) {
+
+}
+
+@media only screen and (max-width:767px) {
+    .service-banner .banner_text {
+        font-size: 30px;
+        top: 25%;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width:599px) {
+    .service-banner .banner_text {
+        font-size: 25px;
+        top: 25%;
+        padding: 20px;
+    }
+
+    .description_text{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:479px) {
+    .service-banner {
+        height: 230px;
+    }
+    .service-banner .banner_text {
+        font-size: 20px;
+        top: 20%;
+    }
+    #hosting_page section {
+        margin-top: 280px;
+    }
+    .description_text{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:359px) {
+    .service-banner .banner_text {
+        top: 15%;
+    }
+    .description_text{
+        text-align: center;
+    }
+}

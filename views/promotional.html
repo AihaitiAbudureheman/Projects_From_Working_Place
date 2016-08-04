@@ -1,0 +1,87 @@
+<update-title title="{{promotionalObj.promotional_meta_title | translate}}"></update-title>
+<update-meta name="description" content="{{promotionalObj.promotional_meta_description | translate}}"></update-meta>
+<div id="promotional_page">
+  <!-- Banner Section -->
+  <div class="promotional_banner">
+    <img ng-src="http://wd-agency.com:5062/img/services/promotional/{{promotionalObj.promotional_bannerimage | translate}}" class="img-responsive" alt="{{promotionalObj.promotional_imagetext | translate}}">
+    <h1 class="promotional_banner_text">{{promotionalObj.promotional_heading1 | translate}}<br /><br />{{promotionalObj.promotional_heading2 | translate}}</h1>
+  </div>
+  <!--End of Banner Section -->
+  <section id="promotional" onscroll="scrollit()">
+    <!-- Title And Sub-Title Sction -->
+    <div layout-align="center center" layout="column" class="promotional_title_section">
+      <div class="scroll_down" layout-align="center" layout="row">
+        <md-icon md-svg-icon="images/icons/ic_keyboard_arrow_down_black_48px.svg" id="down" du-smooth-scroll="down" offset="30" duration="800"></md-icon>
+      </div>
+      <h1 layout-align="center" layout="row">{{promotionalObj.promotional_title | translate}}</h1>
+      <p>{{promotionalObj.promotional_description | translate}}</p>
+    </div>
+    <!-- End of Title And Sub-Title Sction -->
+    <!-- Technologies icon horizontal men-->
+    <div class="promotional_tab" >
+      <md-content>
+        <md-tabs md-dynamic-height="" md-border-bottom="" md-no-pagination>
+          <md-tab>
+            <md-tab-label layout="row">
+              <div>
+                <a href="#wp" du-smooth-scroll offset="90"><img ng-src="http://wd-agency.com:5062/img/services/promotional/{{ promotionalObj.promotional_icon_img | translate }}" class="img-responsive services_icon" alt="{{ promotionalObj.promotional_desc | translate }}"></a>
+              </div>
+              <span class="promotional_icon_text">{{ promotionalObj.promotional_desc | translate }}</span>
+            </md-tab-label>
+          </md-tab>
+
+          <md-tab>
+            <md-tab-label layout="row">
+              <div>
+                <a href="#js" du-smooth-scroll offset="90"><img ng-src="http://wd-agency.com:5062/img/services/promotional/{{ promotionalObj.promotional_icon_img_2 | translate }}" class="img-responsive services_icon" alt="{{ promotionalObj.promotional_desc_2 | translate }}"></a>
+              </div>
+              <span class="promotional_icon_text">{{ promotionalObj.promotional_desc_2 | translate }}</span>
+            </md-tab-label>
+          </md-tab>
+        </md-tabs>
+      </md-content>
+
+
+
+
+      <!--List of promotional items-->
+      <div id="promotional_box" layout="column">
+        <div id="promotional_container">
+          <div layout="row" id="wp">
+            <h2 flex>{{promotionalObj.promotional_desc | translate}}</h2>
+          </div>
+          <div -webkit-layout="row" layout-gt-md="row" layout-md="row" -webkit-layout-sm="column" -webkit-layout-xs="column"  class="promotional_item">
+            <div flex="15" flex-sm="100" flex-xs="100" id="image"><img ng-src="http://wd-agency.com:5062/img/services/promotional/{{promotionalObj.promotional_text_img | translate}}" alt="{{promotionalObj.promotional_desc | translate}}"></div>
+            <P flex="85" flex-sm="100" flex-xs="100">
+              {{promotionalObj.promotional_text | translate}}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="promotional_box" layout="column">
+        <div id="promotional_container">
+          <div layout="row" id="js">
+            <h2 flex>{{promotionalObj.promotional_desc_2 | translate}}</h2>
+          </div>
+          <div -webkit-layout="row" layout-gt-md="row" layout-md="row" -webkit-layout-sm="column" -webkit-layout-xs="column"  class="promotional_item">
+            <div flex="15" flex-sm="100" flex-xs="100" id="image"><img ng-src="http://wd-agency.com:5062/img/services/promotional/{{promotionalObj.promotional_text_img_2 | translate}}" alt="{{promotionalObj.promotional_desc_2 | translate}}"></div>
+            <P flex="85" flex-sm="100" flex-xs="100">
+              {{promotionalObj.promotional_text_2 | translate}}
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!--Link to customer's project page-->
+      <div layout="row" id="aboutProject_promotional">
+        <div flex>
+          <a ui-sref="{{promotionalObj.about_project_url | translate}}({lancode:language})" target="_blank"><h2>{{promotionalObj.about_project | translate}}<img ng-src="images/services/technologies/{{'technologies_arrow' | translate}}.png"  alt="{{'technologies_arrow_alt' | translate}}"> </h2></a>
+        </div>
+      </div>
+    </div>
+    <!-- End of md-tab -->
+  </section>
+</div>

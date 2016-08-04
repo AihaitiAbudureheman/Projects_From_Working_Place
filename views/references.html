@@ -1,0 +1,227 @@
+<update-title title="{{'references_meta_title' | translate}}"></update-title>
+<update-meta name="description" content="{{'references_meta_description' | translate}}"></update-meta>
+<div layout="column" id="references" ng-init="promotional='true'">
+  <div layout="row" class="banner">
+    <div layout="row" flex="100" layout-align="center center">
+      <div ng-click="referenceVideo();" layout="column" flex="30" flex-xs="100" layout-align="center center" layout-padding layout-margin>
+        <span> {{'show'  | translate}}</span>
+        <hr>
+        <img src="images/references/play.png" alt="Play button">
+      </div>
+    </div>
+  </div>
+  <div layout="row" layout-align="center center">
+    <div layout="column" layout-align="center center" class="reference_column">
+      <h1>{{'presents'  | translate}}</h1>
+      <div layout="row" layout-sm="column" layout-xs="column">
+        <div layout-margin>
+          <button class="button" ng-click="promotional = 'true';ecommerce = 'false';mobile = 'false';custom = 'false'" ng-class="{'selected':promotional == 'true'}">{{'promotional' | translate}} </button>
+        </div>
+        <div layout-margin>
+          <button class="button" ng-click="promotional = 'false';ecommerce = 'true';mobile = 'false';custom = 'false'" ng-class="{'selected':ecommerce == 'true'}">{{'commerce' | translate}} </button>
+        </div>
+        <div layout-margin>
+          <button class="button" ng-click="promotional = 'false';ecommerce = 'false';mobile = 'true';custom = 'false'" ng-class="{'selected':mobile == 'true'}"> {{'mobile' | translate}} </button>
+        </div>
+        <div layout-margin>
+          <button class="button" ng-click="promotional = 'false';ecommerce = 'false';mobile = 'false';custom = 'true'" ng-class="{'selected':custom == 'true'}">{{'custom' | translate}} </button>
+        </div>
+      </div>
+      <!--- Promotional -->
+      <div ng-show="promotional === 'true'" ng-hide="reference_first" class="container_references references_hide">
+        <div layout="row" layout-wrap class="reference_row">
+          <div class="row_inner" layout="row" layout-align="center" layout-wrap>
+            <div ng-repeat="item1 in promoObj" ng-init="idx=$index" class="layout_grid">
+
+              <figure ng-click=" scrollIt(idx); reference.id = 'true'">
+                <img ng-src="http://wd-agency.com:5062/img/references/{{ item1.picture | translate }}" alt="" class="website">
+                <img src="/images/references/cross.png" alt="plus" class="plus">
+                <div layout="row" class="legend">
+                  <div layout="column" layout-padding>
+                    <h3>{{item1.name | translate }}</h3>
+                    <span>{{item1.legend | translate }}</span>
+                  </div>
+                  <div layout-padding>
+                    <img src="/images/references/latch.png">
+                  </div>
+                </div>
+                <span ng-show="reference.id=='true'" class="reference_arrow"></span>
+
+              </figure>
+
+              <div ng-show="reference.id == 'true'" class="container_references_details" id="reference.id" click-outside="reference.id ='false'" outside-if-not="{{ item1.category._id | translate }}">
+                <div class="expanded" layout="row">
+                  <div layout="row" layout-align="center" layout-padding class="expanded_img">
+                    <img ng-src="http://wd-agency.com:5062/img/references/{{ item1.picture | translate }}" alt="{{ item1.title | translate }}" class="img">
+                  </div>
+                  <div layout="column" layout-padding class="expanded_content">
+                    <h3>{{item1.title | translate }}</h3>
+                    <p>{{item1.description | translate }}</p>
+                    <ul>
+                      <li>
+                        <span class="b">{{item1.technology | translate }}</span>: {{ item1.technology | translate }}
+                      </li>
+                      <li>
+                        <span class="b">{{item1.framework | translate }}</span>: {{ item1.framework | translate }}
+                      </li>
+                    </ul>
+                    <a ng-href="{{item1.link | translate }}" target="_blank">VISIT WEBSITE</a>
+                  </div>
+                  <div class="reference_close">
+                    <img src="/images/footer/close.png" ng-click="reference.id = 'false'">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--- end/Promotional -->
+      <!--- E-commerce -->
+      <div ng-show="ecommerce  == 'true'" class="container_references">
+        <div layout="row" layout-wrap class="reference_row">
+          <div class="row_inner" layout="row" layout-align="center" layout-wrap>
+            <div ng-repeat="item2 in ecomObj" ng-init="idx=$index" class="layout_grid">
+              <figure ng-click="scrollIt(idx); reference.id = 'true'">
+                <img ng-src="http://wd-agency.com:5062/img/references/{{ item2.picture | translate }}" alt="" class="website">
+                <img src="/images/references/cross.png" alt="plus" class="plus">
+                <div layout="row" class="legend">
+                  <div layout-padding>
+                    <h3>{{ item2.name | translate }}</h3>
+                    <span>{{ item2.legend | translate }}</span>
+                  </div>
+                  <div layout-padding>
+                    <img src="/images/references/latch.png">
+                  </div>
+                </div>
+                <span ng-show="reference.id == 'true'" class="reference_arrow"></span>
+              </figure>
+              <div ng-show="reference.id == 'true'" class="container_references_details" id="reference.id" click-outside="reference.id = 'false'" outside-if-not="{{ item2.category._id | translate }}">
+                <div class="expanded" layout="row">
+                  <div layout="row" layout-align="center" layout-padding class="expanded_img">
+                    <img ng-src="/images/references/{{ item2.picture | translate }}" alt="{{ item2.title | translate }}" class="img">
+                  </div>
+                  <div layout="column" layout-padding class="expanded_content">
+                    <h3>{{ item2.title | translate }}</h3>
+                    <p>{{ item2.description | translate }}
+                    </p>
+                    <ul>
+                      <li>
+                        <span class="b">{{ item2.technology | translate }}</span>: {{ item2.technology | translate }}
+                      </li>
+                      <li>
+                        <span class="b">{{ item2.framework | translate }}</span>: {{ item2.framework | translate }}
+                      </li>
+                    </ul>
+                    <a ng-show="true" ng-href="{{ item2.link | translate }}" target="_blank">VISIT WEBSITE</a>
+                  </div>
+                  <div class="reference_close">
+                    <img src="/images/footer/close.png" ng-click="reference.id = 'false'">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--- end/E-commerce -->
+      <!-- Mobile -->
+      <div ng-show="mobile  == 'true'" class="container_references">
+        <div layout="row" layout-wrap class="reference_row">
+          <div class="row_inner" layout="row" layout-align="center" layout-wrap>
+            <div ng-repeat="item3 in mobObj" ng-init="idx=$index" class="layout_grid">
+              <figure ng-click="scrollIt(idx); reference.id = 'true'">
+                <img ng-src="http://wd-agency.com:5062/img/references/{{ item3.picture | translate }}" alt="" class="website">
+                <img src="/images/references/cross.png" alt="plus" class="plus">
+                <div layout="row" class="legend">
+                  <div layout="column" layout-padding>
+                    <h3>{{ item3.name | translate }}</h3>
+                    <span>{{ item3.legend | translate }}</span>
+                  </div>
+                  <div layout-padding>
+                    <img src="/images/references/latch.png">
+                  </div>
+                </div>
+                <span ng-show="reference.id == 'true'" class="reference_arrow"></span>
+              </figure>
+              <div ng-show="reference.id == 'true'" class="container_references_details" id="reference.id" click-outside="reference.id = 'false'" outside-if-not="{{ item3.category._id | translate }}">
+                <div class="expanded" layout="row">
+                  <div layout="row" layout-align="center" layout-padding class="expanded_img">
+                    <img ng-src="http://wd-agency.com:5062/img/references/{{ item3.picture | translate }}" alt="{{ item3.title | translate }}" class="img">
+                  </div>
+                  <div layout="column" layout-padding class="expanded_content">
+                    <h3>{{ item3.title | translate }}</h3>
+                    <p>{{ item3.description | translate }}</p>
+                    <ul>
+                      <li>
+                        <span class="b">{{ item3.technology | translate }}</span>: {{ item3.technology | translate }}
+                      </li>
+                      <li>
+                        <span class="b">{{ item3.framework | translate }}</span>: {{ item3.framework | translate }}
+                      </li>
+                    </ul>
+                    <a ng-href="{{item3.link | translate }}" target="_blank">VISIT WEBSITE</a>
+                  </div>
+                  <div class="reference_close">
+                    <img src="/images/footer/close.png" ng-click="reference.id = 'false'">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- end/Mobile -->
+      <!-- Custom -->
+      <div ng-show="custom  == 'true'" class="container_references">
+        <div layout="row" layout-wrap class="reference_row">
+          <div class="row_inner" layout="row" layout-align="center" layout-wrap>
+            <div ng-repeat="item4 in cusObj" ng-init="idx=$index" class="layout_grid">
+              <figure ng-click="scrollIt(idx); reference.id = 'true'">
+                <img ng-src="http://wd-agency.com:5062/img/references/{{ item4.picture | translate }}" alt="" class="website">
+                <img src="/images/references/cross.png" alt="plus" class="plus">
+                <div layout="row" class="legend">
+                  <div layout="column" layout-padding>
+                    <h3> {{ item4.name | translate }}</h3>
+                    <span>{{ item4.legend | translate }}</span>
+                  </div>
+                  <div layout-padding>
+                    <img src="/images/references/latch.png">
+                  </div>
+                </div>
+                <span ng-show="reference.id == 'true'" class="reference_arrow"></span>
+              </figure>
+              <div ng-show="reference.id == 'true'" class="container_references_details" id="reference.id" click-outside="reference.id = 'false'" outside-if-not="{{ item4.category._id | translate }}">
+                <div class="expanded" layout="row">
+                  <div layout="row" layout-align="center" layout-padding class="expanded_img">
+                    <img ng-src="http://wd-agency.com:5062/img/references/{{ item4.picture | translate }}" alt="{{ item4.title | translate }}" class="img">
+                  </div>
+                  <div layout="column" layout-padding class="expanded_content">
+                    <h3>{{ item4.title | translate }}</h3>
+                    <p>{{ item4.description | translate }}</p>
+                    <ul>
+                      <li>
+                        <span class="b">{{ item4.technology | translate }}</span>: {{ item4.technology | translate }}
+                      </li>
+                      <li>
+                        <span class="b">{{ item4.framework | translate }}</span>: {{ item4.framework | translate }}
+                      </li>
+                    </ul>
+                    <a ng-if="item4.link | translate " ng-href="{{ item4.link | translate }}" target="_blank">VISIT WEBSITE</a>
+                  </div>
+                  <div class="reference_close">
+                    <img src="/images/footer/close.png" ng-click="reference.id = 'false'">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end/Custom -->
+    </div>
+  </div>
+</div>

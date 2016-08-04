@@ -1,0 +1,386 @@
+
+/*Banner Image Section*/
+.process_banner {
+    width: 100%;
+    height: 350px;
+    position: fixed;
+    top: 64px;
+}
+.process_image {
+    width: 100%;
+    height: 100%;
+}
+.process_text {
+    font-family: 'GeosansLight';
+    font-size: 36px;
+    color: #fff;
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    top: 30%;
+    left: 0;
+    padding: 0 20px;
+}
+
+/*Four Deliverables Section*/
+.four_deliverables {
+    overflow: auto;
+    margin-top: 414px;
+    text-align: center;
+    background-color: #ebebeb;
+    padding: 48px 0 30px 0;
+    position: relative;
+}
+.processsection_heading {
+    font-family: 'colaborate-thinregular';
+    font-size: 36px;
+    margin: 0 0 23px;
+    color: #666562;
+    text-align: center;
+}
+.processsection_text {
+    /*font-family: 'colaborate-thinregular';*/
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+    line-height: 18px;
+    color: #9e9e9d;
+    padding: 0 20px;
+}
+.four_deliverables md-card {
+    border: none;
+    background: none;
+    box-shadow: none;
+    padding: 0 15px;
+}
+.four_deliverables md-card .md-headline {
+    font-family: 'colaborate-thinregular';
+    font-size: 20px;
+    line-height: 0;
+    padding-bottom: 10px;
+}
+.four_deliverables md-card .card_image {
+    margin-bottom: 40px;
+}
+.four_deliverables md-card md-card-content p {
+    font-family: 'open_sanslight';
+    font-size: 13px;
+    color: #666562;
+    line-height: 20px;
+}
+.four_deliverables .md-button {
+    margin: 0 auto;
+    border: none;
+}
+.four_deliverables .md-button span {
+    font-family: 'open_sanslight';
+    font-size: 12px;
+    padding: 4px 19px;
+    bottom: 40px;
+    left: 50%;
+    border: 1px solid #484743;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -o-transition: .4s;
+    -ms-transition: .4s;
+}
+.four_deliverables .md-button span:hover {
+    background-color: #484743;
+    color: #fff;
+}
+.four_deliverables .md-button:hover,
+.four_deliverables .md-button,
+.four_deliverables .md-button:active {
+    background: none !important;
+}
+.md-ripple-container {
+    background: none !important;
+}
+.deliverables_list {
+    padding-top: 30px;
+}
+
+/*Parallax Section*/
+#process_page .parallax_scroll {
+    position: relative;
+    overflow: auto;
+}
+#process_page .process_parallax {
+    max-height: 320px;
+    overflow: hidden;
+}
+#process_page .process_parallax img.parallax_img {
+    width: 100%;
+    margin-top: -280px;
+}
+#process_page .parallax_txt {
+    position: relative;
+}
+#process_page .parallax_txt img {
+    position: relative;
+    top: -24px;
+}
+#process_page .process_parallax p {
+    font-family: 'GeosansLight';
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    margin: 0 10px 0;
+    padding: 0 10px;
+}
+#process_page .process_parallax p .parallax_span {
+    font-family: 'GeosansLight';
+    font-size: 40px !important;
+    color: #58b6a2;
+}
+
+/*Full Process Section*/
+.full_process {
+    background-color: #fff;
+    padding-top: 48px;
+    position: relative;
+    overflow: auto;
+}
+.full_process .processsection_text {
+    color: #484743 !important;
+}
+.fullprocess_list {
+    padding: 0 0 !important;
+}
+.list_bg {
+    background-color: #58b6a2;
+    color: #fff;
+}
+.list_bg .md-subheader .md-subheader-content span {
+    color: #ffffff;
+}
+.list_bg .list_symbol {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+}
+.fullprocess_list .md-subheader {
+    font-family: 'GeosansLight';
+    font-size: 30px;
+    display: block;
+    position: relative;
+    line-height: 70px;
+    text-decoration: none;
+    outline: none;
+    color: #6a6a67;
+    -webkit-transition: color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+}
+.fullprocess_list .md-subheader .list_symbol {
+    position: absolute;
+    top: 50%;
+    right: -9px;
+    margin-top: -16px;
+    opacity: 0;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.fullprocess_list .md-subheader:hover .list_symbol {
+    opacity: 1;
+    right: 10px;
+}
+.list_symbol {
+    float: right;
+    color: #484743;
+    border: 1px solid #484743;
+    border-radius: 100%;
+    width: 33px;
+    padding: -2px 10px !important;
+    height: 33px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.list_item {
+    position: relative;
+    padding: 0 15%;
+    margin: 0 auto;
+    width: 100%;
+}
+d-expand-collapse {
+    width: 100%;
+}
+.plus {
+    line-height: 29px!important;
+    margin-left: 2px!important;
+    display: block;
+}
+.minus {
+    line-height: 23px!important;
+    margin-left: 8px!important;
+    display: none;
+}
+.plus,
+.minus {
+    font-family: 'open_sanslight'!important;
+    font-size: 46px!important;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+.full_process md-list {
+    padding: 40px 0 0 0 !important;
+}
+.full_process md-list .md-subheader {
+    font-family: 'GeosansLight';
+    font-size: 30px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    outline: none;
+    color: #6a6a67;
+    background: none !important;
+    -webkit-transition: color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+}
+.list_item .list_img {
+    width: 0;
+    height: 0;
+}
+.list_bg .list_img {
+    border-radius: 100%;
+    background: #fff;
+    margin: 0 auto;
+    display: table;
+    width: 50px !important;
+    height: 50px !important;
+}
+.link_color a {
+    color: #fff;
+}
+.list_bg .link_color a {
+    color: #1e705f;
+    font-weight: 700;
+}
+.list_bg .link_color a:hover,
+.list_bg .link_color a:focus {
+    color: #ffffff;
+}
+.hide_div {
+    display: none;
+    padding-bottom: 25px;
+}
+.hide_div p {
+    font-family: 'open_sanslight';
+    font-size: 16px !important;
+    color: #ffffff !important;
+    width: 90%;
+    margin-left: 15px !important;
+    line-height: 28px !important;
+}
+
+/*--Media queries starting from here--*/
+@media only screen and (max-width:1280px) {
+    .four_deliverables {
+        margin-top:350px;
+    }
+}
+@media only screen and (max-width:1023px) {
+    .process_text {
+        top: 25%;
+    }
+}
+@media only screen and (max-width:959px) {
+    .process_banner {
+        height: 300px;
+    }
+    .four_deliverables {
+        margin-top: 300px;
+    }
+    .process_text {
+        top: 24%;
+        font-size: 32px;
+    }
+}
+@media only screen and (max-width:767px) {
+    #process_page img.parallax_img {
+        width: 100% !important;
+        height: 100% !important;
+        margin-top: -187px !important;
+    }
+    #process_page .process_parallax p {
+        font-size: 30px !important;
+    }
+    #process_page .process_parallax p .parallax_span {
+        font-size: 34px !important;
+    }
+    .process_banner {
+        height: 250px;
+    }
+    .four_deliverables {
+        margin-top: 250px;
+    }
+    .process_text {
+        top: 25%;
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width:599px) {
+    .process_banner {
+        height: 200px;
+    }
+    .four_deliverables {
+        margin-top: 200px;
+    }
+    .process_text {
+        top: 26%;
+        font-size: 20px;
+    }
+    #process_page img.parallax_img {
+        width: 100% !important;
+        height: 100% !important;
+        margin-top: -187px !important;
+    }
+    #process_page .process_parallax p {
+        font-size: 24px !important;
+    }
+    #process_page .process_parallax p .parallax_span {
+        font-size: 28px !important;
+    }
+    .list_item {
+        padding: 0 5%;
+    }
+}
+@media only screen and (max-width:479px) {
+    .process_text {
+        top: 20%;
+        font-size: 16px;
+    }
+    #process_page img.parallax_img {
+        width: 100% !important;
+        height: 100% !important;
+        margin-top: -177px !important;
+    }
+    #process_page .process_parallax p {
+        font-size: 20px !important;
+    }
+    #process_page .process_parallax p .parallax_span {
+        font-size: 24px !important;
+    }
+    .process_banner {
+        height: 150px;
+    }
+    .four_deliverables {
+        margin-top: 150px;
+    }
+    .list_item {
+        padding: 0 1%;
+    }
+}

@@ -1,0 +1,17 @@
+<update-title title="{{'facewall_meta_title' | translate}}"></update-title>
+<update-meta name="description" content="{{'facewall_meta_description' | translate}}"></update-meta>
+<md-content id="facewall_wrapper" layout-align="start center">
+    <md-list class="facewall_list">
+        <md-list-item ng-repeat="figures in faces.facewall" class="grayscale">
+            <figure>
+                <img ng-src="/images/about/facewall/{{figures.img}}.png" alt="{{figures.img}}">
+            </figure>
+        </md-list-item>
+    </md-list>
+    <a ui-sref="about({langcode:language})" id="facewall_back">
+        Close
+    </a>
+</md-content>
+<div id='wrapper_layer'>
+    <span class='visible'></span><span class='invisible'></span>
+</div>

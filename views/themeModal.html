@@ -1,0 +1,36 @@
+<md-dialog class="col-xs-10 col-sm-8 col-lg-4 mdModal" style="color:#484743; font-family: colaborate-thinregular; border-radius:none;" ng-cloak>
+  <form>
+    <md-toolbar style="background:none; min-height:40px !important; height:40px !important;">
+      <div class="md-toolbar-tools">
+        <span flex></span>
+        <md-button id="md-close" class="md-icon-button" ng-click="cancel()" style="color:#484743; border:none; margin-bottom:none;">
+          <md-icon md-svg-src="images/icons/ic_clear_black_24px.svg" style="fill:#484743;"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content" style="padding-top:0px;">
+        <h2 class="text-center" style="margin-bottom:20px; margin-top:0px;">YOU ARE ALMOST THERE</h2>
+        <p style="font-size: 18px; text-align:center">
+          In order to setup your project you will require a domain name and hosting provider. Don’t have a domain name yet?
+        </p>
+        <div class="text-center">
+          <md-button ng-click="answer(0)" style=" margin-bottom:30px;">
+            I want a new domain
+          </md-button>
+        </div>
+        <p style="font-size: 18px; text-align:center">
+          If you already own a domain name, you can still get the theme for free. Just click below.
+        </p>
+        <div class="text-center">
+          <md-button ng-click="answer(1)" style=" margin-bottom:20px;">
+            I already have a domain
+          </md-button>
+        </div>
+
+      </div>
+    </md-dialog-content>
+
+  </form>
+</md-dialog>

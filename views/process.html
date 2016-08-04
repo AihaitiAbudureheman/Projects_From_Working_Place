@@ -1,0 +1,81 @@
+<update-title title="{{'process_meta_title' | translate}}"></update-title>
+<update-meta name="description" content="{{'process_meta_description' | translate}}"></update-meta>
+
+<div id="process_page">
+    <!-- Banner Image -->
+    <div class="process_banner">
+        <img ng-src="images/process/{{'process_banner_img' | translate}}.jpg" class="process_image img-responsive center-block" alt="{{process.banner_txt}}">
+        <div class="process_text">{{'process_banner_txt' | translate}}</div>
+    </div>
+    <!-- Four Delverables Section -->
+    <!--a´comment added here-->
+    <div class='four_deliverables'>
+        <h1 class="processsection_heading">{{'four_deliverables.headline' | translate}}</h1>
+        <p class="processsection_text"><i>{{'four_deliverables.description1'  | translate }}  <br />{{'four_deliverables.description2'  | translate}}</i></p>
+        <div class="deliverables_list" layout="row" layout-sm="column" layout-xs="column" ng-init="items=[0, 1 , 2, 3]">
+            <div flex-sm flex-gt-sm="25" layout="column" ng-repeat="item in items">
+                <md-card>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{ 'four_deliverables.deliverables.'+ item +'.heading' | translate }}</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-content>
+                        <img ng-src="images/process/{{ 'four_deliverables.deliverables.'+ item +'.image' | translate }}.png" class="card_image" alt="{{ 'four_deliverables.deliverables.'+ item +'.image' | translate }}">
+                        <p>
+                            {{ 'four_deliverables.deliverables.'+ item +'.description' | translate }}
+                        </p>
+                    </md-card-content>
+                    <md-card-actions  hide-gt-sm layout="row" layout-align="center">
+                        <md-button ng-href="{{'four_deliverables.deliverables.'+ item +'.link' | translate}}" target="_blank" class="example_btn">{{ 'four_deliverables.deliverables.'+ item +'.button' | translate }}</md-button>
+                    </md-card-actions>
+                </md-card>
+            </div>
+        </div>
+        <div layout="row" hide-sm hide-xs ng-init="items=[0, 1 , 2, 3]">
+            <div flex-sm flex-gt-sm="25" layout="column" layout-align="center" ng-repeat="item in items">
+                <md-button ng-href="{{'four_deliverables.deliverables.'+ item +'.link' | translate}}" target="_blank">{{ 'four_deliverables.deliverables.'+ item +'.button' | translate }}</md-button>
+            </div>
+        </div>
+    </div>
+    <!-- Parallax Scroll Section -->
+    <div class="parallax_scroll">
+        <div class="process_parallax">
+            <div class="parallax_txt" layout="row" layout-align="center" du-parallax y="txt_parallax">
+                <p>{{'process_parallax_banner.parallax_txt1' | translate}} <span><br />{{'process_parallax_banner.parallax_txt2' | translate}}</span><span class="parallax_span"><br />{{'process_parallax_banner.parallax_txt3' | translate}}</span></p>
+            </div>
+            <img class="parallax_img" ng-src="images/process/{{'process_parallax_banner.parallax_img' | translate}}.jpg" alt="{{'process_parallax_banner.parallax_img' | translate}}">
+        </div>
+    </div>
+    <!-- Full Process Section -->
+    <div class='full_process'>
+        <h1 class="processsection_heading">{{'full_process.headline' | translate}}</h1>
+        <p class="processsection_text"><i>{{'full_process.description1' | translate}} <span><br /> {{'full_process.description2' | translate}}</span></i></p>
+        <md-list ng-init="items1=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]">
+            <md-divider></md-divider>
+            <md-list-item ng-repeat="item1 in items1" class="fullprocess_list">
+                <d-expand-collapse>
+                    <md-divider></md-divider>
+                    <div class="list_item">
+                        <md-subheader class="md-no-sticky"> {{ 'full_process.list.'+ item1 +'.headline' | translate }}
+                            <div class="list_symbol">
+                                <p class="plus">+</p>
+                                <p class="minus">-</p>
+                            </div>
+                        </md-subheader>
+                        <div class="hide_div">
+                            <div layout="row">
+                                <div flex-gt-md="10" flex-md="15" flex-sm="20" flex-xs="25">
+                                    <img ng-src="images/process/{{ 'full_process.list.'+ item1 +'.img' | translate }}.png" class="list_img" alt="{{ 'full_process.list.'+ item1 +'.headline' | translate }}">
+                                </div>
+                                <div flex-gt-md="90" flex-md="85" flex-sm- "80" flex-xs="75">
+                                    <p>{{ 'full_process.list.'+ item1 +'.description1' | translate }}<span class="link_color"><a href="{{ 'full_process.list.'+ item1 +'.link' | translate }}" target="_blank">{{ 'full_process.list.'+ item1 +'.description2' | translate }}</a></span>{{ 'full_process.list.'+ item1 +'.description3' | translate }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </d-expand-collapse>
+            </md-list-item>
+        </md-list>
+    </div>
+</div>
