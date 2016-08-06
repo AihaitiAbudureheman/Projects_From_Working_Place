@@ -1,2 +1,3 @@
 # Projects_From_Working_Place
-This will include the source code of  all the  the projects I have done at my current working place. Because of the confidentiality reason some part of source code have not been published here.
+This will include source code of the projects I have created from scratch at my current working place. It includes all the source code except some confidential part.
+NOTE: This is a continuing project, so it may contain some incomplete source code, but I will update it as soon as I finished...
